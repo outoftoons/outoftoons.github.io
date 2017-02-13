@@ -81,6 +81,11 @@ $(document).ready(function(){
 				$(this).next('td').next('td').show();
 				$(this).next('td').next('td').next('td').hide();
 			});
+			if ($(window).height()< 500){
+				$(".headingLink").each(function(){
+					$(this).css('color', 'lime');
+				});
+			});
 		}
 		else {
 			$('.headingTable td:has(span)').each(function(){
