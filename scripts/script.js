@@ -1,5 +1,5 @@
 //what to do on page load
-$(document).ready(function(){
+$(window).load(function(){
 	//function to determine if there is currently a scrollbar
 	(function($) {
 		$.fn.hasScrollBar = function() {
