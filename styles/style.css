@@ -1,0 +1,163 @@
+.hamburgerOverlay {
+	position: absolute;
+	top: 87px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2;
+	overflow-y: hidden;
+	background-color: rgba(0,0,0,.85);
+	text-align: "center";
+}
+.heading {
+	height: 85px;
+	position: absolute;
+	top: 0px;
+	left:0px;
+	right:17px;
+	bottom:0px;
+	z-index: 2;
+	overflow:hidden;
+	background-color: rgba(0,0,0,.85);
+}
+.headingTable {
+	position: absolute;
+	width: 100%;
+	white-space: nowrap;
+	z-index: 1;
+}
+.logo {
+	position: relative;
+	top: 2px;
+	height: 75px;
+	margin-left: 20px;
+	text-decoration: none;
+}
+.headingLink {
+	font-family: calibri;
+	font-size: 22px;
+	color: white;
+	position: relative;
+	text-decoration: none;
+}
+.imageLink {
+	position: relative;
+	top: 2px;
+	height: 30px;
+}
+.imageLinkRight {
+	position: relative;
+	top: 2px;
+	margin-right: 20px;
+	height: 30px;
+}
+a.outLink{
+	text-decoration: none;
+}
+a.outLink:hover {
+    color: white;
+}
+.hamburger {
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.headingLine{
+	height: 2px;
+	position: absolute;
+	top: 85px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	z-index: 2;
+	animation: headingLine 30s;
+	animation-iteration-count: infinite;
+}
+@keyframes headingLine {
+	0%   {background:rgba(255,0,0,.85);}
+	17%  {background:rgba(255,165,0,.85);}
+	33%  {background:rgba(255,255,0,.85);}
+	50%  {background:rgba(0,255,0,.85);}
+	67%  {background:rgba(0,0,255,.85);}
+	83%  {background:rgba(128,0,128,.85);}
+	100% {background:rgba(255,0,0,.85);}
+}
+.content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow-y: auto;
+	z-index: 1;
+	background-color: black;
+	padding-left: 10%;
+	padding-right: calc(10% + 17px);
+}
+.header {
+	text-align: center;
+	font-size: 50px;
+	font-family: calibri;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+.hr {
+	margin-left: 0em;
+	margin-right: 0em;
+}
+.text {
+	position: relative;
+	font-family: calibri;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+}
+.profileImage {
+	position: relative;
+	width: 95%;
+	max-width: 300px;
+	border-width: 4px;   
+	border-style: solid; 
+}
+.textbox { 
+   resize: none;
+   width: 90%;
+   font-family:calibri;
+   font-size:20px;
+}
+.albumTitle {
+	position: relative;
+	font-family: calibri;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+	cursor: pointer;
+}
+.album {
+	display: none;
+}
+.albumImage {
+	position: relative;
+	display: block;
+	width: 95%;
+	max-width: 960px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.submit {
+	font-family: calibri;
+	font-size: 20px;
+	color: black;
+	cursor: pointer;
+	background-color: white;
+}
+.submit:hover {
+    background-color: rgb(210,210,210);
+}
