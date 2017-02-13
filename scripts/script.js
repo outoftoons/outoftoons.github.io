@@ -16,6 +16,7 @@ $(document).ready(function(){
 			});
 		}
 		else {
+			alert("entered else")
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
 				$(this).css('right', '0px');
 			});
