@@ -21,6 +21,7 @@ $(document).ready(function(){
 			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
 				$(this).css('margin-right', '20px');
 			});
+			alert("has scrollbar");
 		}
 		else {
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
@@ -35,6 +36,7 @@ $(document).ready(function(){
 			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
 				$(this).css('margin-right', '3px');
 			});
+			alert("no scrollbar")
 		}
 	});
 	
@@ -281,15 +283,5 @@ $(document).ready(function(){
 		$(this).css("color", colors[colorIndex])
 	},function(){
 		$(this).css('color','white');
-	});
-	
-	// test. remove.
-	$(".header").click(function(){
-		if ($('.content').hasScrollBar()){
-			alert("has scrollbar");
-		}
-		else {
-			alert("no scrollbar");
-		}
 	});
 });
