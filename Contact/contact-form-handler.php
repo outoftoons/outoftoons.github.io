@@ -23,7 +23,7 @@ if( empty($errors)){
 	
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
-	header('Location: OOT- Contact Thank You.html');
+	header('Location: ../Thank You/index.html');
 }
 ?>
 
