@@ -88,7 +88,7 @@ $(document).ready(function(){
 			}
 			else if ($(window).height()> 590){
 				$(".headingLink").each(function(){
-					$(this).css('font-size', '50px');
+					$(this).css('font-size', '40px');
 				});
 			}
 			else{
@@ -125,7 +125,7 @@ $(document).ready(function(){
 			}
 			else if ($(window).height()> 590){
 				$(".headingLink").each(function(){
-					$(this).css('font-size', '50px');
+					$(this).css('font-size', '40px');
 				});
 			}
 			else{
