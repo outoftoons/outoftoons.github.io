@@ -1,4 +1,12 @@
 $(document).ready(function(){
+	//function to determine if there is currently a scrollbar
+	(function($) {
+		alert("entered hasscrollbar");
+		$.fn.hasScrollBar = function() {
+			return this.get(0).scrollHeight > this.height();
+		}
+	})(jQuery);
+	
 	$(document).ready(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
@@ -16,7 +24,6 @@ $(document).ready(function(){
 			});
 		}
 		else {
-			alert("entered else");
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
 				$(this).css('right', '0px');
 			});
@@ -64,13 +71,6 @@ $(document).ready(function(){
 			});
 		}
 	});
-	
-	//function to determine if there is currently a scrollbar
-	(function($) {
-		$.fn.hasScrollBar = function() {
-			return this.get(0).scrollHeight > this.height();
-		}
-	})(jQuery);
 	
 	$(document).ready(function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
