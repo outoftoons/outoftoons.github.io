@@ -21,7 +21,6 @@ $(document).ready(function(){
 			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
 				$(this).css('margin-right', '20px');
 			});
-			alert("has scrollbar");
 		}
 		else {
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
@@ -36,7 +35,6 @@ $(document).ready(function(){
 			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
 				$(this).css('margin-right', '3px');
 			});
-			alert("no scrollbar")
 		}
 	});
 	
