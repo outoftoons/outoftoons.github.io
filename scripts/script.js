@@ -6,6 +6,13 @@ $(document).ready(function(){
 				return this.get(0).scrollHeight > this.height();
 			}
 		})(jQuery);
+		
+		if ($('.content').hasScrollBar()){
+			alert("has scrollbar");
+		}
+		else {
+			alert("no scrollbar");
+		}
 	});
 	
 	$(document).ready(function(){
