@@ -1,33 +1,35 @@
 $(document).ready(function(){
-	//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
-	if ($('.content').hasScrollBar()){
-		$('.headingLine:not(:contains("zxywvut"))').each(function(){
-			$(this).css('right', '17px');
-		});
-		$('.content:not(:contains("zxywvut"))').each(function(){
-			$(this).css('padding-right', '10%');
-		});
-		$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
-			$(this).css('right', '17px');
-		});
-		$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
-			$(this).css('margin-right', '20px');
-		});
-	}
-	else {
-		$('.headingLine:not(:contains("zxywvut"))').each(function(){
-			$(this).css('right', '0px');
-		});
-		$('.content:not(:contains("zxywvut"))').each(function(){
-			$(this).css('padding-right', 'calc(10% + 17px)');
-		});
-		$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
-			$(this).css('right', '0px');
-		});
-		$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
-			$(this).css('margin-right', '3px');
-		});
-	}
+	$(document).ready(function(){
+		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
+		if ($('.content').hasScrollBar()){
+			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+				$(this).css('right', '17px');
+			});
+			$('.content:not(:contains("zxywvut"))').each(function(){
+				$(this).css('padding-right', '10%');
+			});
+			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+				$(this).css('right', '17px');
+			});
+			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+				$(this).css('margin-right', '20px');
+			});
+		}
+		else {
+			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+				$(this).css('right', '0px');
+			});
+			$('.content:not(:contains("zxywvut"))').each(function(){
+				$(this).css('padding-right', 'calc(10% + 17px)');
+			});
+			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+				$(this).css('right', '0px');
+			});
+			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+				$(this).css('margin-right', '3px');
+			});
+		}
+	});
 	
 	//what to do on window resize
 	$(window).on('resize', function(){
