@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$(document).ready(function(){
+		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
 				$(this).css('right', '17px');
