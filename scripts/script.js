@@ -85,7 +85,7 @@ $(document).ready(function(){
 				$(".headingLink").each(function(){
 					$(this).css('color', 'lime');
 				});
-			});
+			}
 		}
 		else {
 			$('.headingTable td:has(span)').each(function(){
