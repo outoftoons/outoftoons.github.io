@@ -32,6 +32,7 @@
 	height: 75px;
 	margin-left: 20px;
 	border:none;
+	text-decoration: none;
 }
 .headingLink {
 	font-family: calibri;
@@ -45,6 +46,7 @@
 	top: 2px;
 	height: 30px;
 	border:none;
+	text-decoration: none;
 }
 .imageLinkRight {
 	position: relative;
@@ -52,6 +54,7 @@
 	margin-right: 20px;
 	height: 30px;
 	border:none;
+	text-decoration: none;
 }
 a.outLink{
 	text-decoration: none;
