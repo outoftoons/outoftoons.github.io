@@ -6,13 +6,6 @@ $(document).ready(function(){
 		}
 	})(jQuery);
 	
-	if ($('.content').hasScrollBar()){
-		alert("has scrollbar");
-	}
-	else {
-		alert("no scrollbar");
-	}
-	
 	$(document).ready(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
