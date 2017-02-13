@@ -12,27 +12,27 @@ $(document).ready(function(){
 			$('.headingLine').each(function(){
 				$(this).css('right', '17px');
 			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
+			$('.content').each(function(){
 				$(this).css('padding-right', '10%');
 			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$('.hamburgerOverlay').each(function(){
 				$(this).css('right', '17px');
 			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$('.imageLinkRight').each(function(){
 				$(this).css('margin-right', '20px');
 			});
 		}
 		else {
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$('.headingLine').each(function(){
 				$(this).css('right', '0px');
 			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
+			$('.content').each(function(){
 				$(this).css('padding-right', 'calc(10% + 17px)');
 			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$('.hamburgerOverlay').each(function(){
 				$(this).css('right', '0px');
 			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$('.imageLinkRight').each(function(){
 				$(this).css('margin-right', '3px');
 			});
 		}
@@ -42,30 +42,30 @@ $(document).ready(function(){
 	$(window).on('resize', function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$('.headingLine').each(function(){
 				$(this).css('right', '17px');
 			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
+			$('.content').each(function(){
 				$(this).css('padding-right', '10%');
 			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$('.hamburgerOverlay').each(function(){
 				$(this).css('right', '17px');
 			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$('.imageLinkRight').each(function(){
 				$(this).css('margin-right', '20px');
 			});
 		}
 		else {
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$('.headingLine').each(function(){
 				$(this).css('right', '0px');
 			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
+			$('.content').each(function(){
 				$(this).css('padding-right', 'calc(10% + 17px)');
 			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$('.hamburgerOverlay').each(function(){
 				$(this).css('right', '0px');
 			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$('.imageLinkRight').each(function(){
 				$(this).css('margin-right', '3px');
 			});
 		}
@@ -83,12 +83,12 @@ $(document).ready(function(){
 			});
 			if ($(window).height()< 460){
 				$(".headingLink").each(function(){
-					$(this).css('color', 'lime');
+					$(this).css('font-size', '16px');
 				});
 			}
 			else{
 				$(".headingLink").each(function(){
-					$(this).css('color', 'white');
+					$(this).css('font-size', '22px');
 				});
 			}
 		}
@@ -113,6 +113,16 @@ $(document).ready(function(){
 					$(this).next('td').fadeIn(400);//outlinks fade out hamburger fades in
 				});
 			});
+			if ($(window).height()< 460){
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '16px');
+				});
+			}
+			else{
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '22px');
+				});
+			}
 		}
 		else {
 			$('.hamburgerOverlay').fadeOut(400);
@@ -124,6 +134,16 @@ $(document).ready(function(){
 					$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
 				});
 			});
+			if ($(window).height()< 460){
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '16px');
+				});
+			}
+			else{
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '22px');
+				});
+			}
 		}
 	});
 
@@ -231,30 +251,30 @@ $(document).ready(function(){
 	$(".albumTitle").click(function(){
 		$(this).next('.album').toggle(0,function(){
 			if ($('.content').hasScrollBar()){
-				$('.headingLine:not(:contains("zxywvut"))').each(function(){
+				$('.headingLine').each(function(){
 					$(this).css('right', '17px');
 				});
-				$('.content:not(:contains("zxywvut"))').each(function(){
+				$('.content').each(function(){
 					$(this).css('padding-right', '10%');
 				});
-				$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+				$('.hamburgerOverlay').each(function(){
 					$(this).css('right', '17px');
 				});
-				$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+				$('.imageLinkRight').each(function(){
 					$(this).css('margin-right', '20px');
 				});
 			}
 			else {
-				$('.headingLine:not(:contains("zxywvut"))').each(function(){
+				$('.headingLine').each(function(){
 					$(this).css('right', '0px');
 				});
-				$('.content:not(:contains("zxywvut"))').each(function(){
+				$('.content').each(function(){
 					$(this).css('padding-right', 'calc(10% + 17px)');
 				});
-				$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+				$('.hamburgerOverlay').each(function(){
 					$(this).css('right', '17px');
 				});
-				$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+				$('.imageLinkRight').each(function(){
 					$(this).css('margin-right', '3px');
 				});
 			}
