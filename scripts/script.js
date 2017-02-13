@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(document).ready(function(){
-		// if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
+		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
 				$(this).css('right', '17px');
@@ -31,7 +31,9 @@ $(document).ready(function(){
 		}
 	});
 	
+	//what to do on window resize
 	$(window).on('resize', function(){
+		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
 			$('.headingLine:not(:contains("zxywvut"))').each(function(){
 				$(this).css('right', '17px');
@@ -62,6 +64,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	//function to determine if there is currently a scrollbar
 	(function($) {
 		$.fn.hasScrollBar = function() {
 			return this.get(0).scrollHeight > this.height();
@@ -69,6 +72,7 @@ $(document).ready(function(){
 	})(jQuery);
 	
 	$(document).ready(function(){
+		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
 		if ($(window).width() < 1081) {
 			$('.headingTable td:has(span)').each(function(){
 				$(this).prev('td').show();
@@ -89,6 +93,7 @@ $(document).ready(function(){
 		}
 	});
 	$(window).on('resize', function(){
+		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
 		if ($(window).width() < 1081) {
 			$('.headingTable td:has(span)').each(function(){
 				$(this).fadeOut(400, function(){
@@ -112,6 +117,7 @@ $(document).ready(function(){
 		}
 	});
 
+	//assign headlink hover colors
 	$(".headingLink:contains('News')").hover(function(){
 		$(this).css('color', 'red');
 	},function(){
@@ -153,6 +159,7 @@ $(document).ready(function(){
 		$(this).css('color','');
 	});
 	
+	//assign image link hover 
 	$(function() {
 		$(".imageLink")
 			.mouseover(function() { 
@@ -165,6 +172,7 @@ $(document).ready(function(){
 			});
 	});
 	
+	//hamburger hovers
 	var hamburgerColors = [
 		"-red.png",
 		"-orange.png",
@@ -186,6 +194,7 @@ $(document).ready(function(){
 			});
 	});
 	
+	// hamburger overlay visibility
 	$(".hamburger").click(function(){
 		if ( $(".hamburgerOverlay").is(":visible") ) {
 			$('.hamburgerOverlay').fadeOut(400);
@@ -195,6 +204,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	// profile image hovering
 	$(function() {
 		$(".profileImage")
 			.mouseover(function() { 
@@ -207,6 +217,7 @@ $(document).ready(function(){
 			});
 	});
 	
+	//showing and hiding photos when you click album titles
 	$(".albumTitle").click(function(){
 		$(this).next('.album').toggle(0,function(){
 			if ($('.content').hasScrollBar()){
@@ -240,6 +251,7 @@ $(document).ready(function(){
 		});
 	});
 	
+	// outlink hover colors
 	var colors = [
 		"red",
 		"orange",
@@ -263,6 +275,7 @@ $(document).ready(function(){
 		$(this).css('color',colors[colorIndex]);
 	});
 
+	// album title hover colors
 	$(".albumTitle").hover(function() {
 		var colorIndex = Math.floor(Math.random() * colors.length);
 		$(this).css("color", colors[colorIndex])
