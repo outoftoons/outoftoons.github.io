@@ -154,6 +154,41 @@ $(document).ready(function(){
 				$(this).attr("src", src);
 			});
 	});
+	
+	//showing and hiding photos when you click album titles
+	$(".albumTitle").click(function(){
+		$(this).next('.album').toggle(0,function(){
+			if ($('.content').hasScrollBar()){
+				$('.headingLine:not(:contains("zxywvut"))').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.content:not(:contains("zxywvut"))').each(function(){
+					$(this).css('padding-right', '10%');
+				});
+				$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+					$(this).css('margin-right', '20px');
+				});
+			}
+			else {
+				$('.headingLine:not(:contains("zxywvut"))').each(function(){
+					$(this).css('right', '0px');
+				});
+				$('.content:not(:contains("zxywvut"))').each(function(){
+					$(this).css('padding-right', 'calc(10% + 17px)');
+				});
+				$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+					$(this).css('margin-right', '3px');
+				});
+			}
+		});
+	});
+	
 	// outlink hover colors
 	var colors = [
 		"red",
