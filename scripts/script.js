@@ -1,35 +1,33 @@
 $(document).ready(function(){
-	$(document).ready(function(){
-		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
-		if ($('.content').hasScrollBar()){
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
-				$(this).css('padding-right', '10%');
-			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
-				$(this).css('margin-right', '20px');
-			});
-		}
-		else {
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.content:not(:contains("zxywvut"))').each(function(){
-				$(this).css('padding-right', 'calc(10% + 17px)');
-			});
-			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
-				$(this).css('margin-right', '3px');
-			});
-		}
-	});
+	//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
+	if ($('.content').hasScrollBar()){
+		$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$(this).css('right', '17px');
+		});
+		$('.content:not(:contains("zxywvut"))').each(function(){
+			$(this).css('padding-right', '10%');
+		});
+		$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$(this).css('right', '17px');
+		});
+		$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$(this).css('margin-right', '20px');
+		});
+	}
+	else {
+		$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$(this).css('right', '0px');
+		});
+		$('.content:not(:contains("zxywvut"))').each(function(){
+			$(this).css('padding-right', 'calc(10% + 17px)');
+		});
+		$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
+			$(this).css('right', '0px');
+		});
+		$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
+			$(this).css('margin-right', '3px');
+		});
+	}
 	
 	//what to do on window resize
 	$(window).on('resize', function(){
@@ -71,27 +69,26 @@ $(document).ready(function(){
 		}
 	})(jQuery);
 	
-	$(document).ready(function(){
-		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
-		if ($(window).width() < 1081) {
-			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').show();
-				$(this).hide();
-				$(this).next('td').hide();
-				$(this).next('td').next('td').show();
-				$(this).next('td').next('td').next('td').hide();
-			});
-		}
-		else {
-			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').hide();
-				$(this).show();
-				$(this).next('td').show();
-				$(this).next('td').next('td').hide();
-				$(this).next('td').next('td').next('td').hide();
-			});
-		}
-	});
+	//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
+	if ($(window).width() < 1081) {
+		$('.headingTable td:has(span)').each(function(){
+			$(this).prev('td').show();
+			$(this).hide();
+			$(this).next('td').hide();
+			$(this).next('td').next('td').show();
+			$(this).next('td').next('td').next('td').hide();
+		});
+	}
+	else {
+		$('.headingTable td:has(span)').each(function(){
+			$(this).prev('td').hide();
+			$(this).show();
+			$(this).next('td').show();
+			$(this).next('td').next('td').hide();
+			$(this).next('td').next('td').next('td').hide();
+		});
+	}
+	
 	$(window).on('resize', function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
 		if ($(window).width() < 1081) {
@@ -260,13 +257,11 @@ $(document).ready(function(){
 		"blue",
 		"purple"    
 	];
-	$(document).ready(function(){
-		$('.outLink').each(function(){
-			var colorIndex = Math.floor(Math.random() * colors.length);
-			$(this).css("color", colors[colorIndex])
-		},function(){
-			$(this).css('color','white');
-		});
+	$('.outLink').each(function(){
+		var colorIndex = Math.floor(Math.random() * colors.length);
+		$(this).css("color", colors[colorIndex])
+	},function(){
+		$(this).css('color','white');
 	});
 	$(".outLink").hover(function() {
 		$(this).css("color", "white")
