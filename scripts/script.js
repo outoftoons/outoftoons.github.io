@@ -282,4 +282,14 @@ $(document).ready(function(){
 	},function(){
 		$(this).css('color','white');
 	});
+	
+	// test. remove.
+	$(".header").click(function(){
+		if ($('.content').hasScrollBar()){
+			alert("has scrollbar");
+		}
+		else {
+			alert("no scrollbar");
+		}
+	});
 });
