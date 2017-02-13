@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	//function to determine if there is currently a scrollbar
 	(function($) {
-		alert("entered hasscrollbar");
 		$.fn.hasScrollBar = function() {
 			return this.get(0).scrollHeight > this.height();
 		}
