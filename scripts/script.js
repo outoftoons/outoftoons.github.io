@@ -1,19 +1,17 @@
 $(document).ready(function(){
-	$(document).ready(function(){
 	//function to determine if there is currently a scrollbar
-		(function($) {
-			$.fn.hasScrollBar = function() {
-				return this.get(0).scrollHeight > this.height();
-			}
-		})(jQuery);
-		
-		if ($('.content').hasScrollBar()){
-			alert("has scrollbar");
+	window.onload =(function($) {
+		$.fn.hasScrollBar = function() {
+			return this.get(0).scrollHeight > this.height();
 		}
-		else {
-			alert("no scrollbar");
-		}
-	});
+	})(jQuery);
+	
+	if ($('.content').hasScrollBar()){
+		alert("has scrollbar");
+	}
+	else {
+		alert("no scrollbar");
+	}
 	
 	$(document).ready(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
