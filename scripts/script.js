@@ -9,7 +9,7 @@ $(document).ready(function(){
 	window.onload =(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
-			$('.headingLine:not(:contains("zxywvut"))').each(function(){
+			$('.headingLine').each(function(){
 				$(this).css('right', '17px');
 			});
 			$('.content:not(:contains("zxywvut"))').each(function(){
@@ -63,7 +63,7 @@ $(document).ready(function(){
 				$(this).css('padding-right', 'calc(10% + 17px)');
 			});
 			$('.hamburgerOverlay:not(:contains("zxywvut"))').each(function(){
-				$(this).css('right', '17px');
+				$(this).css('right', '0px');
 			});
 			$('.imageLinkRight:not(:contains("zxywvut"))').each(function(){
 				$(this).css('margin-right', '3px');
@@ -81,9 +81,14 @@ $(document).ready(function(){
 				$(this).next('td').next('td').show();
 				$(this).next('td').next('td').next('td').hide();
 			});
-			if ($(window).height()< 500){
+			if ($(window).height()< 460){
 				$(".headingLink").each(function(){
 					$(this).css('color', 'lime');
+				});
+			}
+			else{
+				$(".headingLink").each(function(){
+					$(this).css('color', 'white');
 				});
 			}
 		}
