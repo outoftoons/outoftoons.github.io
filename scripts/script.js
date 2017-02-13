@@ -71,26 +71,27 @@ $(document).ready(function(){
 		}
 	})(jQuery);
 	
-	//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
-	if ($(window).width() < 1081) {
-		$('.headingTable td:has(span)').each(function(){
-			$(this).prev('td').show();
-			$(this).hide();
-			$(this).next('td').hide();
-			$(this).next('td').next('td').show();
-			$(this).next('td').next('td').next('td').hide();
-		});
-	}
-	else {
-		$('.headingTable td:has(span)').each(function(){
-			$(this).prev('td').hide();
-			$(this).show();
-			$(this).next('td').show();
-			$(this).next('td').next('td').hide();
-			$(this).next('td').next('td').next('td').hide();
-		});
-	}
-	
+	$(document).ready(function(){
+		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
+		if ($(window).width() < 1081) {
+			$('.headingTable td:has(span)').each(function(){
+				$(this).prev('td').show();
+				$(this).hide();
+				$(this).next('td').hide();
+				$(this).next('td').next('td').show();
+				$(this).next('td').next('td').next('td').hide();
+			});
+		}
+		else {
+			$('.headingTable td:has(span)').each(function(){
+				$(this).prev('td').hide();
+				$(this).show();
+				$(this).next('td').show();
+				$(this).next('td').next('td').hide();
+				$(this).next('td').next('td').next('td').hide();
+			});
+		}
+	});
 	$(window).on('resize', function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
 		if ($(window).width() < 1081) {
@@ -259,11 +260,13 @@ $(document).ready(function(){
 		"blue",
 		"purple"    
 	];
-	$('.outLink').each(function(){
-		var colorIndex = Math.floor(Math.random() * colors.length);
-		$(this).css("color", colors[colorIndex])
-	},function(){
-		$(this).css('color','white');
+	$(document).ready(function(){
+		$('.outLink').each(function(){
+			var colorIndex = Math.floor(Math.random() * colors.length);
+			$(this).css("color", colors[colorIndex])
+		},function(){
+			$(this).css('color','white');
+		});
 	});
 	$(".outLink").hover(function() {
 		$(this).css("color", "white")
