@@ -86,6 +86,11 @@ $(document).ready(function(){
 					$(this).css('font-size', '16px');
 				});
 			}
+			else if ($(window).height()< 690){
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '36px');
+				});
+			}
 			else{
 				$(".headingLink").each(function(){
 					$(this).css('font-size', '22px');
@@ -118,6 +123,11 @@ $(document).ready(function(){
 					$(this).css('font-size', '16px');
 				});
 			}
+			else if ($(window).height()< 690){
+				$(".headingLink").each(function(){
+					$(this).css('font-size', '36px');
+				});
+			}
 			else{
 				$(".headingLink").each(function(){
 					$(this).css('font-size', '22px');
@@ -134,16 +144,9 @@ $(document).ready(function(){
 					$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
 				});
 			});
-			if ($(window).height()< 460){
-				$(".headingLink").each(function(){
-					$(this).css('font-size', '16px');
-				});
-			}
-			else{
-				$(".headingLink").each(function(){
-					$(this).css('font-size', '22px');
-				});
-			}
+			$(".headingLink").each(function(){
+				$(this).css('font-size', '16px');
+			});
 		}
 	});
 
