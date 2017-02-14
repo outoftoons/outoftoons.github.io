@@ -391,4 +391,9 @@ $(document).ready(function(){
 	},function(){
 		$(this).css('color','white');
 	});
+	
+	//remove addressbar in mobile chrome
+	if(navigator.userAgent.match(/Android/i)){
+		window.scrollTo(0,1);
+	 }
 });
