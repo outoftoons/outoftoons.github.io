@@ -111,10 +111,10 @@ $(document).ready(function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
 		if ($(window).width() < 1081) {
 			$('.headingTable td:has(span)').each(function(){
-				$(this).fadeOut(400, function(){
+				$(this).fadeOut(400).promise().done(function(){
 					$(this).prev('td').fadeIn(400);//links fade out blank fades in
 				});
-				$(this).next('td').fadeOut(400, function(){
+				$(this).next('td').fadeOut(400).promise().done(function(){
 					$(this).next('td').fadeIn(400);//outlinks fade out hamburger fades in
 				});
 			});
@@ -137,10 +137,10 @@ $(document).ready(function(){
 		else {
 			$('.hamburgerOverlay').fadeOut(400);
 			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').fadeOut(400, function(){
+				$(this).prev('td').fadeOut(400).promise().done(function(){
 					$(this).next('td').fadeIn(400);//blank fades out links fade in
 				});
-				$(this).next('td').next('td').fadeOut(400, function(){
+				$(this).next('td').next('td').fadeOut(400).promise().done(function(){
 					$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
 				});
 			});
