@@ -82,17 +82,17 @@ $(document).ready(function(){
 				$(this).next('td').next('td').next('td').hide();
 			});
 			if ($(window).height()< 460){
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '16px');
 				});
 			}
 			else if ($(window).height()> 620){
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '40px');
 				});
 			}
 			else{
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '22px');
 				});
 			}
@@ -119,17 +119,17 @@ $(document).ready(function(){
 				});
 			});
 			if ($(window).height()< 460){
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '16px');
 				});
 			}
 			else if ($(window).height()> 620){
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '40px');
 				});
 			}
 			else{
-				$(".headingLink").each(function(){
+				$(".hamburgerLink").each(function(){
 					$(this).css('font-size', '22px');
 				});
 			}
@@ -144,13 +144,10 @@ $(document).ready(function(){
 					$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
 				});
 			});
-			$(".headingLink").each(function(){
-				$(this).css('font-size', '22px');
-			});
 		}
 	});
 
-	//assign headlink hover colors
+	//assign headinglink and hamburgerlink hover colors
 	$(".headingLink:contains('News')").hover(function(){
 		$(this).css('color', 'red');
 	},function(){
@@ -181,12 +178,42 @@ $(document).ready(function(){
 	},function(){
 		$(this).css('color','');
 	});
-	$(".headingLink:contains('Facebook')").hover(function(){
+	(".hamburgerLink:contains('News')").hover(function(){
+		$(this).css('color', 'red');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('About')").hover(function(){
+		$(this).css('color', 'orange');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('Members')").hover(function(){
+		$(this).css('color', 'yellow');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('Repertoire')").hover(function(){
+		$(this).css('color', 'lime');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('Photos')").hover(function(){
+		$(this).css('color', 'blue');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('Contact')").hover(function(){
+		$(this).css('color', 'purple');
+	},function(){
+		$(this).css('color','');
+	});
+	$(".hamburgerLink:contains('Facebook')").hover(function(){
 		$(this).css('color', 'rgb(59, 89, 152');
 	},function(){
 		$(this).css('color','');
 	});
-		$(".headingLink:contains('YouTube')").hover(function(){
+	$(".hamburgerLink:contains('YouTube')").hover(function(){
 		$(this).css('color', 'rgb(229,45,39)');
 	},function(){
 		$(this).css('color','');

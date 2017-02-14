@@ -54,6 +54,13 @@
 	height: 30px;
 	border:none;
 }
+.hamburgerLink {
+	font-family: calibri;
+	font-size: 22px;
+	color: white;
+	position: relative;
+	text-decoration: none;
+}
 a.outLink{
 	text-decoration: none;
 }
