@@ -391,14 +391,4 @@ $(document).ready(function(){
 	},function(){
 		$(this).css('color','white');
 	});
-	
-	//on mobile hide addressbar
-	window.addEventListener("load",function() {
-		if(isMobile){
-			setTimeout(function(){
-				// This hides the address bar:
-				window.scrollTo(0, 1);
-			}, 0);
-		}
-	});
 });
