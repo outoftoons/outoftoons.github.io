@@ -1,3 +1,17 @@
+//remove addressbar in mobile chrome
+$(document).ready(function() {
+	if (navigator.userAgent.match(/Android/i)) {
+		window.scrollTo(0,0); // reset in case prev not scrolled  
+		var nPageH = $(document).height();
+		var nViewH = window.outerHeight;
+		if (nViewH > nPageH) {
+			nViewH -= 250;
+			$('BODY').css('height',nViewH + 'px');
+		}
+		window.scrollTo(0,1);
+	}
+});
+
 $(document).ready(function(){
 	//boolean for if mobile
 	var isMobile = /android|webOS|iphone|ipod|ipad|blackberry|iemobile|opera mini|opera mobi|skyfire|maemo|windows phone|palm|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase()) ? true : false;
@@ -390,19 +404,5 @@ $(document).ready(function(){
 		$(this).css("color", colors[colorIndex])
 	},function(){
 		$(this).css('color','white');
-	});
-	
-	//remove addressbar in mobile chrome
-	$(document).ready(function() {
-		if (navigator.userAgent.match(/Android/i)) {
-			window.scrollTo(0,0); // reset in case prev not scrolled  
-			var nPageH = $(document).height();
-			var nViewH = window.outerHeight;
-			if (nViewH > nPageH) {
-				nViewH -= 250;
-				$('BODY').css('height',nViewH + 'px');
-			}
-			window.scrollTo(0,1);
-		}
 	});
 });
