@@ -9,6 +9,41 @@ $(document).ready(function(){
 		}
 	})(jQuery);
 	
+	//this one runs it in the event that cached window is loaded
+	$(document).ready(function(){
+		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
+		if ($('.content').hasScrollBar()){
+			if (!isMobile){
+				$('.headingLine').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.content').each(function(){
+					$(this).css('padding-right', '10%');
+				});
+				$('.hamburgerOverlay').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.imageLinkRight').each(function(){
+					$(this).css('margin-right', '20px');
+				});
+			}
+		}
+		else {
+			$('.headingLine').each(function(){
+				$(this).css('right', '0px');
+			});
+			$('.content').each(function(){
+				$(this).css('padding-right', 'calc(10% + 17px)');
+			});
+			$('.hamburgerOverlay').each(function(){
+				$(this).css('right', '0px');
+			});
+			$('.imageLinkRight').each(function(){
+				$(this).css('margin-right', '3px');
+			});
+		}
+	});
+
 	//this one prevents it from running before the content loads
 	window.onload =(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
