@@ -1,4 +1,7 @@
 $(document).ready(function(){
+	//boolean for if mobile
+	var isMobile = /android|webOS|iphone|ipod|ipad|blackberry|iemobile|opera mini|opera mobi|skyfire|maemo|windows phone|palm|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase()) ? true : false;
+	
 	//function to determine if there is currently a scrollbar
 	(function($) {
 		$.fn.hasScrollBar = function() {
@@ -6,21 +9,24 @@ $(document).ready(function(){
 		}
 	})(jQuery);
 	
+	//this one prevents it from running before the content loads
 	window.onload =(function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
-			$('.headingLine').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.content').each(function(){
-				$(this).css('padding-right', '10%');
-			});
-			$('.hamburgerOverlay').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.imageLinkRight').each(function(){
-				$(this).css('margin-right', '20px');
-			});
+			if (!isMobile){
+				$('.headingLine').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.content').each(function(){
+					$(this).css('padding-right', '10%');
+				});
+				$('.hamburgerOverlay').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.imageLinkRight').each(function(){
+					$(this).css('margin-right', '20px');
+				});
+			}
 		}
 		else {
 			$('.headingLine').each(function(){
@@ -42,18 +48,20 @@ $(document).ready(function(){
 	$(window).on('resize', function(){
 		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
 		if ($('.content').hasScrollBar()){
-			$('.headingLine').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.content').each(function(){
-				$(this).css('padding-right', '10%');
-			});
-			$('.hamburgerOverlay').each(function(){
-				$(this).css('right', '17px');
-			});
-			$('.imageLinkRight').each(function(){
-				$(this).css('margin-right', '20px');
-			});
+			if (!isMobile){
+				$('.headingLine').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.content').each(function(){
+					$(this).css('padding-right', '10%');
+				});
+				$('.hamburgerOverlay').each(function(){
+					$(this).css('right', '17px');
+				});
+				$('.imageLinkRight').each(function(){
+					$(this).css('margin-right', '20px');
+				});
+			}
 		}
 		else {
 			$('.headingLine').each(function(){
@@ -285,18 +293,20 @@ $(document).ready(function(){
 	$(".albumTitle").click(function(){
 		$(this).next('.album').toggle(0,function(){
 			if ($('.content').hasScrollBar()){
-				$('.headingLine').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.content').each(function(){
-					$(this).css('padding-right', '10%');
-				});
-				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.imageLinkRight').each(function(){
-					$(this).css('margin-right', '20px');
-				});
+				if (!isMobile){
+					$('.headingLine').each(function(){
+						$(this).css('right', '17px');
+					});
+					$('.content').each(function(){
+						$(this).css('padding-right', '10%');
+					});
+					$('.hamburgerOverlay').each(function(){
+						$(this).css('right', '17px');
+					});
+					$('.imageLinkRight').each(function(){
+						$(this).css('margin-right', '20px');
+					});
+				}
 			}
 			else {
 				$('.headingLine').each(function(){
