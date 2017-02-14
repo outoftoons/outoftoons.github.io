@@ -12,6 +12,7 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../styles/style.css">
 		<link rel="shortcut icon" type="image/x-icon" href="../Images/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=.65">
 	</head>
 	<body>
 		<div class="hamburgerOverlay" style="display:none">
@@ -132,7 +133,7 @@
 				Contact
 			</span>
 			<hr class="hr">
-			<span class="text">
+			<span class="text" style="display: inline-block;">
 				To contact us for a performance opportunity or if you have any questions, message us on 
 				<a href="https://www.facebook.com/outoftoons/" target="blank" class="outLink">
 					facebook
@@ -142,17 +143,17 @@
 			<br>
 			<br>
 			<form action="contact-form-handler.php" method="post" name="contactform" class="text">
-				Name *
+				Name*
 				<br>
 				<input class="textbox" type="text" name="name" width="90%" required>
 				<br>
 				<br>
-				E-mail Address *
+				E-mail Address*
 				<br>
 				<input class="textbox" type="text" name="email" width="90%" required>
 				<br>
 				<br>
-				Message *
+				Message*
 				<br>
 				<textarea class="textbox" name="message" rows="15" required></textarea>
 				<br>
