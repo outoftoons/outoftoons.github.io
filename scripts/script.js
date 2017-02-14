@@ -178,7 +178,7 @@ $(document).ready(function(){
 	},function(){
 		$(this).css('color','');
 	});
-	(".hamburgerLink:contains('News')").hover(function(){
+	$(".hamburgerLink:contains('News')").hover(function(){
 		$(this).css('color', 'red');
 	},function(){
 		$(this).css('color','');
