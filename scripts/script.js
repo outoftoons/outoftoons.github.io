@@ -109,42 +109,46 @@ $(document).ready(function(){
 	});
 	$(window).on('resize', function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
-		if ($(window).width() < 1081) {
-			$('.headingTable td:has(span)').each(function(){
-				$(this).fadeOut(400).promise().done(function(){
-					$(this).prev('td').fadeIn(400);//links fade out blank fades in
+		setTimeout(function(){
+			if ($(window).width() < 1081) {
+				$('.headingTable td:has(span)').each(function(){
+					$(this).fadeOut(400, function(){
+						$(this).prev('td').fadeIn(400);//links fade out blank fades in
+					});
+					$(this).next('td').fadeOut(400, function(){
+						$(this).next('td').fadeIn(400);//outlinks fade out hamburger fades in
+					});
 				});
-				$(this).next('td').fadeOut(400).promise().done(function(){
-					$(this).next('td').fadeIn(400);//outlinks fade out hamburger fades in
-				});
-			});
-			if ($(window).height()< 460){
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '16px');
+				if ($(window).height()< 460){
+					$(".hamburgerLink").each(function(){
+						$(this).css('font-size', '16px');
+					});
+				}
+				else if ($(window).height()> 620){
+					$(".hamburgerLink").each(function(){
+						$(this).css('font-size', '40px');
+					});
+				}
+				else{
+					$(".hamburgerLink").each(function(){
+						$(this).css('font-size', '22px');
+					});
+				}
+			}
+		}, 400);
+		setTimeout(function(){
+			if ($(window).width() >= 1081) {
+				$('.hamburgerOverlay').fadeOut(400);
+				$('.headingTable td:has(span)').each(function(){
+					$(this).prev('td').fadeOut(400, function(){
+						$(this).next('td').fadeIn(400);//blank fades out links fade in
+					});
+					$(this).next('td').next('td').fadeOut(400, function(){
+						$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
+					});
 				});
 			}
-			else if ($(window).height()> 620){
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '40px');
-				});
-			}
-			else{
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '22px');
-				});
-			}
-		}
-		else {
-			$('.hamburgerOverlay').fadeOut(400);
-			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').fadeOut(400).promise().done(function(){
-					$(this).next('td').fadeIn(400);//blank fades out links fade in
-				});
-				$(this).next('td').next('td').fadeOut(400).promise().done(function(){
-					$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
-				});
-			});
-		}
+		}, 400);
 	});
 
 	//assign headinglink and hamburgerlink hover colors
