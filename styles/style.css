@@ -141,6 +141,7 @@ a.outLink:hover {
 	border-style: solid; 
 }
 .repertoireTable {
+	display: none;
 	border-collapse: collapse;
 }
 .repertoireTable tr:nth-child(even) {
