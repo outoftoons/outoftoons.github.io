@@ -162,9 +162,6 @@ $(document).ready(function(){
 		}
 		//remove extra info on repertoire page when window is too small
 		if ($(window).width() < 800) {
-			$(".repertoireTable").each(function(){
-				$(this).show();
-			});
 			$(".hideCell").each(function(){
 				$(this).hide();
 			});
@@ -173,9 +170,6 @@ $(document).ready(function(){
 			});
 		}
 		else {
-			$(".repertoireTable").each(function(){
-				$(this).show();
-			});
 			$(".hideCell").each(function(){
 				$(this).show();
 			});
@@ -239,9 +233,6 @@ $(document).ready(function(){
 		}
 		//remove extra info on repertoire page when window is too small
 		if ($(window).width() < 800) {
-			$(".repertoireTable").each(function(){
-				$(this).show();
-			});
 			$(".hideCell").each(function(){
 				$(this).hide();
 			});
@@ -250,9 +241,6 @@ $(document).ready(function(){
 			});
 		}
 		else {
-			$(".repertoireTable").each(function(){
-				$(this).show();
-			});
 			$(".hideCell").each(function(){
 				$(this).show();
 			});
