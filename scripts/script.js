@@ -8,179 +8,47 @@ $(document).ready(function(){
 			return this.get(0).scrollHeight > this.height();
 		}
 	})(jQuery);
-	
-	//this one runs it in the event that cached window is loaded
-	$(document).ready(function(){
-		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
-		if ($('.content').hasScrollBar()){
-			if (!isMobile){
-				$('.headingLine').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.content').each(function(){
-					$(this).css('padding-right', '10%');
-				});
-				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.imageLinkRight').each(function(){
-					$(this).css('margin-right', '20px');
-				});
-			}
-		}
-		else {
-			$('.headingLine').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.content').each(function(){
-				$(this).css('padding-right', 'calc(10% + 17px)');
-			});
-			$('.hamburgerOverlay').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.imageLinkRight').each(function(){
-				$(this).css('margin-right', '3px');
-			});
-		}
-	});
 
-	//this one prevents it from running before the content loads
-	window.onload =(function(){
-		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
-		if ($('.content').hasScrollBar()){
-			if (!isMobile){
+	//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
+	(function($) {
+		adjustForScrollBar = function() {
+			if ($('.content').hasScrollBar()){
+				if (!isMobile){
+					$('.headingLine').each(function(){
+						$(this).css('right', '17px');
+					});
+					$('.content').each(function(){
+						$(this).css('padding-right', '10%');
+					});
+					$('.hamburgerOverlay').each(function(){
+						$(this).css('right', '17px');
+					});
+					$('.imageLinkRight').each(function(){
+						$(this).css('margin-right', '20px');
+					});
+				}
+			}
+			else {
 				$('.headingLine').each(function(){
-					$(this).css('right', '17px');
+					$(this).css('right', '0px');
 				});
 				$('.content').each(function(){
-					$(this).css('padding-right', '10%');
+					$(this).css('padding-right', 'calc(10% + 17px)');
 				});
 				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '17px');
+					$(this).css('right', '0px');
 				});
 				$('.imageLinkRight').each(function(){
-					$(this).css('margin-right', '20px');
+					$(this).css('margin-right', '3px');
 				});
 			}
 		}
-		else {
-			$('.headingLine').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.content').each(function(){
-				$(this).css('padding-right', 'calc(10% + 17px)');
-			});
-			$('.hamburgerOverlay').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.imageLinkRight').each(function(){
-				$(this).css('margin-right', '3px');
-			});
-		}
-	});
-	
-	//what to do on window resize
-	$(window).on('resize', function(){
-		//if there is a scrollbar, change padding and margins so that they don't overlap it and they line up with where they should be with no scrollbar
-		if ($('.content').hasScrollBar()){
-			if (!isMobile){
-				$('.headingLine').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.content').each(function(){
-					$(this).css('padding-right', '10%');
-				});
-				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.imageLinkRight').each(function(){
-					$(this).css('margin-right', '20px');
-				});
-			}
-		}
-		else {
-			$('.headingLine').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.content').each(function(){
-				$(this).css('padding-right', 'calc(10% + 17px)');
-			});
-			$('.hamburgerOverlay').each(function(){
-				$(this).css('right', '0px');
-			});
-			$('.imageLinkRight').each(function(){
-				$(this).css('margin-right', '3px');
-			});
-		}
-	});
-	
-	$(document).ready(function(){
-		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
-		if ($(window).width() < 1081) {
-			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').show();
-				$(this).hide();
-				$(this).next('td').hide();
-				$(this).next('td').next('td').show();
-				$(this).next('td').next('td').next('td').hide();
-			});
-			if ($(window).height()< 460){
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '16px');
-				});
-			}
-			else if ($(window).height()> 620){
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '40px');
-				});
-			}
-			else{
-				$(".hamburgerLink").each(function(){
-					$(this).css('font-size', '22px');
-				});
-			}
-		}
-		else {
-			$('.headingTable td:has(span)').each(function(){
-				$(this).prev('td').hide();
-				$(this).show();
-				$(this).next('td').show();
-				$(this).next('td').next('td').hide();
-				$(this).next('td').next('td').next('td').hide();
-			});
-		}
-		//move pics closer together on bigger screen
-		if ($(window).width() > 1300) {
-			$(".memberTable").each(function(){
-				$(this).css('width', '80%');
-			});
-		}
-		else {
-			$(".memberTable").each(function(){
-				$(this).css('width', '100%');
-			});
-		}
-		//remove extra info on repertoire page when window is too small
-		if ($(window).width() < 800) {
-			$(".hideCell").each(function(){
-				$(this).hide();
-			});
-			$(".repertoireTable td:nth-child(2)").each(function(){
-				$(this).css('border-radius', '0 5px 5px 0'); 
-			});
-		}
-		else {
-			$(".hideCell").each(function(){
-				$(this).show();
-			});
-			$(".repertoireTable td:nth-child(2)").each(function(){
-				$(this).css('border-radius', '0 0px 0px 0'); 
-			});
-		}
-	});
-	$(window).on('resize', function(){
-		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
-		setTimeout(function(){
+	})(jQuery);
+
+	//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
+	(function($) {
+		adjustForWindowResize = function() {
+			adjustForScrollBar();
 			if ($(window).width() < 1081) {
 				$('.headingTable td:has(span)').each(function(){
 					$(this).fadeOut(400, function(){
@@ -189,6 +57,7 @@ $(document).ready(function(){
 					$(this).next('td').fadeOut(400, function(){
 						$(this).next('td').fadeIn(400);//outlinks fade out hamburger fades in
 					});
+					$(this).next('td').next('td').next('td').hide();
 				});
 				if ($(window).height()< 460){
 					$(".hamburgerLink").each(function(){
@@ -206,50 +75,72 @@ $(document).ready(function(){
 					});
 				}
 			}
-		}, 400);
-		setTimeout(function(){
-			if ($(window).width() >= 1081) {
+			else {
 				$('.hamburgerOverlay').fadeOut(400);
 				$('.headingTable td:has(span)').each(function(){
-					$(this).prev('td').fadeOut(400, function(){
+					$(this).prev('td').fadeOut(0, function(){
 						$(this).next('td').fadeIn(400);//blank fades out links fade in
 					});
-					$(this).next('td').next('td').fadeOut(400, function(){
+					$(this).next('td').next('td').fadeOut(0, function(){
 						$(this).prev('td').fadeIn(400);//hamburger fades out outlinks fade in
 					});
+					$(this).next('td').next('td').next('td').hide();
 				});
 			}
-		}, 400);
-		//move pics closer together on bigger screen
-		if ($(window).width() > 1300) {
-			$(".memberTable").each(function(){
-					$(this).css('width', '80%');
+			//move pics closer together on bigger screen
+			if ($(window).width() > 1300) {
+				$(".memberTable").each(function(){
+						$(this).css('width', '80%');
+					});
+			}
+			else {
+				$(".memberTable").each(function(){
+						$(this).css('width', '100%');
+					});
+			}
+			//remove extra info on repertoire page when window is too small
+			if ($(window).width() < 800) {
+				$(".repertoireTable").each(function(){
+					$(this).show(); 
 				});
-		}
-		else {
-			$(".memberTable").each(function(){
-					$(this).css('width', '100%');
+				$(".hideCell").each(function(){
+					$(this).hide(0,function(){
+						adjustForScrollBar();
+					});
 				});
+				$(".repertoireTable td:nth-child(2)").each(function(){
+					$(this).css('border-radius', '0 5px 5px 0'); 
+				});
+			}
+			else {
+				$(".repertoireTable").each(function(){
+					$(this).show(); 
+				});
+				$(".hideCell").each(function(){
+					$(this).show();
+				});
+				$(".repertoireTable td:nth-child(2)").each(function(){
+					$(this).css('border-radius', '0 0px 0px 0'); 
+				});
+			}
+			adjustForScrollBar();
 		}
-		//remove extra info on repertoire page when window is too small
-		if ($(window).width() < 800) {
-			$(".hideCell").each(function(){
-				$(this).hide();
-			});
-			$(".repertoireTable td:nth-child(2)").each(function(){
-				$(this).css('border-radius', '0 5px 5px 0'); 
-			});
-		}
-		else {
-			$(".hideCell").each(function(){
-				$(this).show();
-			});
-			$(".repertoireTable td:nth-child(2)").each(function(){
-				$(this).css('border-radius', '0 0px 0px 0'); 
-			});
-		}
-	});
+	})(jQuery);
+	
+	adjustForWindowResize();
 
+	//this one prevents it from running before the content loads
+	window.onload =(function(){
+		adjustForWindowResize();
+	});
+	
+	//what to do on window resize
+	$(window).on('resize', function(){
+		setTimeout(function(){
+			adjustForWindowResize();
+		}, 400);
+	});
+	
 	//assign headinglink and hamburgerlink hover colors
 	$(".headingLink:contains('News')").hover(function(){
 		$(this).css('color', 'red');
@@ -383,36 +274,7 @@ $(document).ready(function(){
 	//showing and hiding photos when you click album titles
 	$(".albumTitle").click(function(){
 		$(this).next('.album').toggle(0,function(){
-			if ($('.content').hasScrollBar()){
-				if (!isMobile){
-					$('.headingLine').each(function(){
-						$(this).css('right', '17px');
-					});
-					$('.content').each(function(){
-						$(this).css('padding-right', '10%');
-					});
-					$('.hamburgerOverlay').each(function(){
-						$(this).css('right', '17px');
-					});
-					$('.imageLinkRight').each(function(){
-						$(this).css('margin-right', '20px');
-					});
-				}
-			}
-			else {
-				$('.headingLine').each(function(){
-					$(this).css('right', '0px');
-				});
-				$('.content').each(function(){
-					$(this).css('padding-right', 'calc(10% + 17px)');
-				});
-				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '17px');
-				});
-				$('.imageLinkRight').each(function(){
-					$(this).css('margin-right', '3px');
-				});
-			}
+			adjustForScrollBar();
 		});
 	});
 	
@@ -425,13 +287,11 @@ $(document).ready(function(){
 		"blue",
 		"purple"    
 	];
-	$(document).ready(function(){
-		$('.outLink').each(function(){
-			var colorIndex = Math.floor(Math.random() * colors.length);
-			$(this).css("color", colors[colorIndex])
-		},function(){
-			$(this).css('color','white');
-		});
+	$('.outLink').each(function(){
+		var colorIndex = Math.floor(Math.random() * colors.length);
+		$(this).css("color", colors[colorIndex])
+	},function(){
+		$(this).css('color','white');
 	});
 	$(".outLink").hover(function() {
 		$(this).css("color", "white")
