@@ -149,6 +149,40 @@ $(document).ready(function(){
 				$(this).next('td').next('td').next('td').hide();
 			});
 		}
+		//move pics closer together on bigger screen
+		if ($(window).width() > 1300) {
+			$(".memberTable").each(function(){
+				$(this).css('width', '80%');
+			});
+		}
+		else {
+			$(".memberTable").each(function(){
+				$(this).css('width', '100%');
+			});
+		}
+		//remove extra info on repertoire page when window is too small
+		if ($(window).width() < 800) {
+			$(".repertoireTable").each(function(){
+				$(this).show();
+			});
+			$(".hideCell").each(function(){
+				$(this).hide();
+			});
+			$(".repertoireTable td:nth-child(2)").each(function(){
+				$(this).css('border-radius', '0 5px 5px 0'); 
+			});
+		}
+		else {
+			$(".repertoireTable").each(function(){
+				$(this).show();
+			});
+			$(".hideCell").each(function(){
+				$(this).show();
+			});
+			$(".repertoireTable td:nth-child(2)").each(function(){
+				$(this).css('border-radius', '0 0px 0px 0'); 
+			});
+		}
 	});
 	$(window).on('resize', function(){
 		//if window is not 1081 pixels wide, change to hamburger layout. if wider than 1080, change to normal layout
@@ -192,6 +226,40 @@ $(document).ready(function(){
 				});
 			}
 		}, 400);
+		//move pics closer together on bigger screen
+		if ($(window).width() > 1300) {
+			$(".memberTable").each(function(){
+					$(this).css('width', '80%');
+				});
+		}
+		else {
+			$(".memberTable").each(function(){
+					$(this).css('width', '100%');
+				});
+		}
+		//remove extra info on repertoire page when window is too small
+		if ($(window).width() < 800) {
+			$(".repertoireTable").each(function(){
+				$(this).show();
+			});
+			$(".hideCell").each(function(){
+				$(this).hide();
+			});
+			$(".repertoireTable td:nth-child(2)").each(function(){
+				$(this).css('border-radius', '0 5px 5px 0'); 
+			});
+		}
+		else {
+			$(".repertoireTable").each(function(){
+				$(this).show();
+			});
+			$(".hideCell").each(function(){
+				$(this).show();
+			});
+			$(".repertoireTable td:nth-child(2)").each(function(){
+				$(this).css('border-radius', '0 0px 0px 0'); 
+			});
+		}
 	});
 
 	//assign headinglink and hamburgerlink hover colors

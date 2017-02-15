@@ -127,6 +127,9 @@ a.outLink:hover {
 	margin-left: auto;
     margin-right: auto;
 }
+.memberTable {
+	width: 100%;
+}
 .profileImage {
 	position: relative;
 	width: 95%;
@@ -134,11 +137,20 @@ a.outLink:hover {
 	border-width: 4px;   
 	border-style: solid; 
 }
-.textbox { 
-   resize: none;
-   width: 90%;
-   font-family:calibri;
-   font-size:20px;
+.repertoireTable {
+	display: none;
+	border-collapse: collapse;
+}
+.repertoireTable tr:nth-child(even) {
+	background-color: rgb(30,30,30);
+}
+.repertoireTable td:first-child {
+  border-radius: 5px 0 0 5px;
+}
+.repertoireTable td:last-child {
+  border-radius: 0 5px 5px 0; 
+}
+.hideCell {
 }
 .albumTitle {
 	position: relative;
@@ -160,6 +172,12 @@ a.outLink:hover {
 	max-width: 960px;
 	margin-left: auto;
     margin-right: auto;
+}
+.textbox { 
+   resize: none;
+   width: 90%;
+   font-family:calibri;
+   font-size:20px;
 }
 .submit {
 	font-family: calibri;
