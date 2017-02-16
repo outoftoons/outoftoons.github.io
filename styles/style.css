@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Calibri';
+    src: url('Calibri.eot') format('embedded-opentype'); /* IE9 and later */
+    src: url('Calibri.eot?#iefix') format('embedded-opentype'), /* IE6 to IE8  */
+         url('Calibri.woff') format('woff'),  /* Modern Browsers */
+         url('Calibri.ttf') format('truetype'), /* Safari, iOS, Chrome, Android, Firefox and Opera except Opera Mini  */
+         url('Calibri.svg#Min_font + regular, italic, bold') format('svg'); /* Legacy iOS */
+}
 body {
 	background: black;
 }
@@ -16,11 +24,11 @@ body {
 	height: 85px;
 	position: absolute;
 	top: 0px;
-	left:0px;
-	right:17px;
-	bottom:0px;
+	left: 0px;
+	right: 17px;
+	bottom: 0px;
 	z-index: 2;
-	overflow:hidden;
+	overflow: hidden;
 	background-color: rgba(0,0,0,.85);
 }
 .headingTable {
@@ -34,11 +42,11 @@ body {
 	top: 2px;
 	height: 75px;
 	margin-left: 20px;
-	border:none;
+	border: none;
 	text-decoration: none;
 }
 .headingLink {
-	font-family: calibri;
+	font-family: Calibri;
 	font-size: 22px;
 	color: white;
 	position: relative;
@@ -48,17 +56,17 @@ body {
 	position: relative;
 	top: 2px;
 	height: 30px;
-	border:none;
+	border: none;
 }
 .imageLinkRight {
 	position: relative;
 	top: 2px;
 	margin-right: 3px;
 	height: 30px;
-	border:none;
+	border: none;
 }
 .hamburgerLink {
-	font-family: calibri;
+	font-family: Calibri;
 	font-size: 22px;
 	color: white;
 	position: relative;
@@ -67,7 +75,7 @@ body {
 a.outLink{
 	text-decoration: none;
 }
-a.outLink:hover {
+a.outLink: hover {
     color: white;
 }
 .hamburger {
@@ -79,21 +87,21 @@ a.outLink:hover {
 	height: 2px;
 	position: absolute;
 	top: 85px;
-	left:0px;
-	right:0px;
-	bottom:0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
 	z-index: 2;
 	animation: headingLine 30s;
 	animation-iteration-count: infinite;
 }
 @keyframes headingLine {
-	0%   {background:rgba(255,0,0,.85);}
-	17%  {background:rgba(255,165,0,.85);}
-	33%  {background:rgba(255,255,0,.85);}
-	50%  {background:rgba(0,255,0,.85);}
-	67%  {background:rgba(0,0,255,.85);}
-	83%  {background:rgba(128,0,128,.85);}
-	100% {background:rgba(255,0,0,.85);}
+	0%  {background: rgba(255,0,0,.85);}
+	17%  {background: rgba(255,165,0,.85);}
+	33%  {background: rgba(255,255,0,.85);}
+	50%  {background: rgba(0,255,0,.85);}
+	67%  {background: rgba(0,0,255,.85);}
+	83%  {background: rgba(128,0,128,.85);}
+	100% {background: rgba(255,0,0,.85);}
 }
 .content {
 	position: absolute;
@@ -105,13 +113,14 @@ a.outLink:hover {
 	z-index: 1;
 	background-color: black;
 	padding-left: 10%;
+	padding-right: 11%; /* for safari */
 	padding-right: calc(10% + 17px);
 	text-align: center;
 }
 .header {
 	text-align: center;
 	font-size: 50px;
-	font-family: calibri;
+	font-family: Calibri;
 	display: block;
 	margin-left: auto;
     margin-right: auto;
@@ -122,7 +131,7 @@ a.outLink:hover {
 }
 .text {
 	position: relative;
-	font-family: calibri;
+	font-family: Calibri;
 	font-size: 20px;
 	color: white;
 	text-align: center;
@@ -137,27 +146,27 @@ a.outLink:hover {
 	position: relative;
 	width: 95%;
 	max-width: 300px;
-	border-width: 4px;   
-	border-style: solid; 
+	border-width: 4px;
+	border-style: solid;
 }
 .repertoireTable {
 	display: none;
 	border-collapse: collapse;
 }
-.repertoireTable tr:nth-child(even) {
+.repertoireTable tr: nth-child(even) {
 	background-color: rgb(30,30,30);
 }
-.repertoireTable td:first-child {
+.repertoireTable td: first-child {
   border-radius: 5px 0 0 5px;
 }
-.repertoireTable td:last-child {
-  border-radius: 0 5px 5px 0; 
+.repertoireTable td: last-child {
+  border-radius: 0 5px 5px 0;
 }
 .hideCell {
 }
 .albumTitle {
 	position: relative;
-	font-family: calibri;
+	font-family: Calibri;
 	font-size: 20px;
 	color: white;
 	display: inline-block;
@@ -177,18 +186,18 @@ a.outLink:hover {
     margin-right: auto;
 }
 .textbox { 
-   resize: none;
-   width: 90%;
-   font-family:calibri;
-   font-size:20px;
+	resize: none;
+	width: 90%;
+	font-family: Calibri;
+	font-size: 20px;
 }
 .submit {
-	font-family: calibri;
+	font-family: Calibri;
 	font-size: 20px;
 	color: black;
 	cursor: pointer;
 	background-color: white;
 }
-.submit:hover {
+.submit: hover {
     background-color: rgb(210,210,210);
 }
