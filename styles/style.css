@@ -75,8 +75,8 @@ body {
 a.outLink{
 	text-decoration: none;
 }
-a.outLink: hover {
-    color: white;
+a.outLink:hover {
+	color: white;
 }
 .hamburger {
 	position: relative;
@@ -136,7 +136,7 @@ a.outLink: hover {
 	font-family: Calibri;
 	display: block;
 	margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
 }
 .hr {
 	margin-left: 0em;
@@ -150,7 +150,7 @@ a.outLink: hover {
 	text-align: center;
 	display: block;
 	margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
 }
 .memberTable {
 	width: 100%;
@@ -166,13 +166,13 @@ a.outLink: hover {
 	display: none;
 	border-collapse: collapse;
 }
-.repertoireTable tr: nth-child(even) {
+.repertoireTable tr:nth-child(even) {
 	background-color: rgb(30,30,30);
 }
-.repertoireTable td: first-child {
+.repertoireTable td:first-child {
   border-radius: 5px 0 0 5px;
 }
-.repertoireTable td: last-child {
+.repertoireTable td:last-child {
   border-radius: 0 5px 5px 0;
 }
 .hideCell {
@@ -184,7 +184,7 @@ a.outLink: hover {
 	color: white;
 	display: inline-block;
 	margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
 	cursor: pointer;
 }
 .album {
@@ -196,7 +196,7 @@ a.outLink: hover {
 	width: 95%;
 	max-width: 960px;
 	margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
 }
 .textbox { 
 	resize: none;
@@ -211,6 +211,6 @@ a.outLink: hover {
 	cursor: pointer;
 	background-color: white;
 }
-.submit: hover {
-    background-color: rgb(210,210,210);
+.submit:hover {
+	background-color: rgb(210,210,210);
 }
