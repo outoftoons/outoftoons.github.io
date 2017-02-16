@@ -91,10 +91,23 @@ a.outLink: hover {
 	right: 0px;
 	bottom: 0px;
 	z-index: 2;
+	background: rgba(255,0,0,.85); /* IE before IE10. No animation */
 	animation: headingLine 30s;
 	animation-iteration-count: infinite;
+	-webkit-animation-name: headingLine; /* Safari */
+	-webkit-animation-duration: 30s; /* Safari */
+	-webkit-animation-iteration-count: infinite; /* Safari */
 }
 @keyframes headingLine {
+	0%  {background: rgba(255,0,0,.85);}
+	17%  {background: rgba(255,165,0,.85);}
+	33%  {background: rgba(255,255,0,.85);}
+	50%  {background: rgba(0,255,0,.85);}
+	67%  {background: rgba(0,0,255,.85);}
+	83%  {background: rgba(128,0,128,.85);}
+	100% {background: rgba(255,0,0,.85);} 
+}
+@-webkit-keyframes headingLine {  /* Safari */
 	0%  {background: rgba(255,0,0,.85);}
 	17%  {background: rgba(255,165,0,.85);}
 	33%  {background: rgba(255,255,0,.85);}
@@ -113,7 +126,7 @@ a.outLink: hover {
 	z-index: 1;
 	background-color: black;
 	padding-left: 10%;
-	padding-right: 11%; /* for safari */
+	padding-right: 11%; /* Safari */
 	padding-right: calc(10% + 17px);
 	text-align: center;
 }
