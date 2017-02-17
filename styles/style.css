@@ -1,13 +1,15 @@
 @font-face {
 	font-family: 'Calibri';
-    src: url('Calibri.eot') format('embedded-opentype'); /* IE9 and later */
-    src: url('Calibri.eot?#iefix') format('embedded-opentype'), /* IE6 to IE8  */
-         url('Calibri.woff') format('woff'),  /* Modern Browsers */
-         url('Calibri.ttf') format('truetype'), /* Safari, iOS, Chrome, Android, Firefox and Opera except Opera Mini  */
-         url('Calibri.svg#Min_font + regular, italic, bold') format('svg'); /* Legacy iOS */
+    src: url('Fonts/Calibri/Calibri.eot') format('embedded-opentype'); /* IE9 and later */
+    src: url('Fonts/Calibri/Calibri.eot?#iefix') format('embedded-opentype'), /* IE6 to IE8  */
+         url('Fonts/Calibri/Calibri.woff') format('woff'),  /* Modern Browsers */
+         url('Fonts/Calibri/Calibri.ttf') format('truetype'), /* Safari, iOS, Chrome, Android, Firefox and Opera except Opera Mini  */
+         url('Fonts/Calibri/Calibri.svg#Min_font + regular, italic, bold') format('svg'); /* Legacy iOS */
 }
 body {
-	background: black;
+	background: rgb(220,220,220);
+	margin: 0;
+	padding: 0;
 }
 .hamburgerOverlay {
 	position: absolute;
@@ -19,23 +21,23 @@ body {
 	overflow-y: hidden;
 	background-color: rgba(0,0,0,.85);
 	text-align: "center";
+	padding-right: 17px;
 }
 .heading {
-	height: 85px;
 	position: absolute;
+	height: 85px;
 	top: 0px;
 	left: 0px;
-	right: 17px;
-	bottom: 0px;
+	right: 0px;
 	z-index: 2;
 	overflow: hidden;
-	background-color: rgba(0,0,0,.85);
+	background-color:rgba(0,0,0,.85);
 }
 .headingTable {
-	position: absolute;
 	width: 100%;
 	white-space: nowrap;
 	z-index: 1;
+	padding-right: 17px;
 }
 .logo {
 	position: relative;
@@ -61,7 +63,7 @@ body {
 .imageLinkRight {
 	position: relative;
 	top: 2px;
-	margin-right: 3px;
+	margin-right: 20px;
 	height: 30px;
 	border: none;
 }
@@ -84,12 +86,11 @@ a.outLink:hover {
 	cursor: pointer;
 }
 .headingLine{
-	height: 2px;
 	position: absolute;
 	top: 85px;
 	left: 0px;
 	right: 0px;
-	bottom: 0px;
+	height: 2px;
 	z-index: 2;
 	background: rgba(255,0,0,.85); /* IE before IE10. No animation */
 	animation: headingLine 30s;
@@ -116,41 +117,48 @@ a.outLink:hover {
 	83%  {background: rgba(128,0,128,.85);}
 	100% {background: rgba(255,0,0,.85);}
 }
-.content {
+.scrollable {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
 	overflow-y: auto;
-	z-index: 1;
-	background-color: black;
-	padding-left: 10%;
-	padding-right: 11%; /* Safari */
-	padding-right: calc(10% + 17px);
-	text-align: center;
 }
-.header {
+.pageTitle {
+	margin-top: 90px;
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	z-index: 1;
 	text-align: center;
 	font-size: 50px;
 	font-family: Calibri;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 .hr {
-	margin-left: 0em;
-	margin-right: 0em;
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	z-index: 1;
+	display: block;
+}
+.content {
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	margin-bottom: 36px;
+	z-index: 1;
+	text-align: center;
+	background-color: rgba(0,0,0,.85);
+	padding: 10px;
 }
 .text {
-	position: relative;
 	font-family: Calibri;
 	font-size: 20px;
 	color: white;
 	text-align: center;
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 }
 .memberTable {
 	width: 100%;
@@ -167,7 +175,7 @@ a.outLink:hover {
 	border-collapse: collapse;
 }
 .repertoireTable tr:nth-child(even) {
-	background-color: rgb(30,30,30);
+	background-color: rgb(160,160,160);
 }
 .repertoireTable td:first-child {
   border-radius: 5px 0 0 5px;
@@ -193,10 +201,9 @@ a.outLink:hover {
 .albumImage {
 	position: relative;
 	display: block;
-	width: 95%;
+	width: calc(100% - 20px);
 	max-width: 960px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: auto;
 }
 .textbox { 
 	resize: none;
@@ -207,7 +214,7 @@ a.outLink:hover {
 .submit {
 	font-family: Calibri;
 	font-size: 20px;
-	color: black;
+	color: white;
 	cursor: pointer;
 	background-color: white;
 }
