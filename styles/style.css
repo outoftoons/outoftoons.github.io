@@ -175,7 +175,7 @@ a.outLink:hover {
 	border-collapse: collapse;
 }
 .repertoireTable tr:nth-child(even) {
-	background-color: rgb(160,160,160);
+	background-color: rgba(80,80,80,.85);
 }
 .repertoireTable td:first-child {
   border-radius: 5px 0 0 5px;
