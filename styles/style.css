@@ -214,10 +214,10 @@ a.outLink:hover {
 .submit {
 	font-family: Calibri;
 	font-size: 20px;
-	color: white;
+	color: rgba(0,0,0,.85);
 	cursor: pointer;
-	background-color: white;
+	background-color: rgb(220,220,220);
 }
 .submit:hover {
-	background-color: rgb(210,210,210);
+	background-color: rgb(200,200,200);
 }
