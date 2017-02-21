@@ -6,7 +6,10 @@ $(document).ready(function(){
 	(function($) {
 		$.fn.hasScrollBar = function() {
 			var pageHeight=this.get(0).scrollHeight
-			return pageHeight > $(window).height();
+			var windowHeight=$(window).height()
+			var scrollbar=pageHeight>windowHeight;
+			//alert("scrollbar= " + scrollbar + " scrollHeight= " + pageHeight + " windowHeight= " + windowHeight);
+			return scrollbar;
 		}
 	})(jQuery);
 
@@ -28,6 +31,14 @@ $(document).ready(function(){
 						$(this).css('margin-left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 						$(this).css('margin-right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 					});
+					$('.video').each(function(){
+						$(this).css('left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
+						$(this).css('right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
+						$(this).css('width', 'calc(80% - 2.9px)');
+					});
+					$('.backArrow').each(function(){
+						$(this).css('left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
+					});
 					$('.pageTitle').each(function(){
 						$(this).css('margin-left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 						$(this).css('margin-right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
@@ -37,6 +48,10 @@ $(document).ready(function(){
 						$(this).css('margin-right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 					});
 					$('.hamburgerOverlay').each(function(){
+						$(this).css('right', '17px');
+						$(this).css('padding-right', '0px');
+					});
+					$('.videoOverlay').each(function(){
 						$(this).css('right', '17px');
 						$(this).css('padding-right', '0px');
 					});
@@ -56,6 +71,14 @@ $(document).ready(function(){
 					$(this).css('margin-left', 'calc(10%)'); 
 					$(this).css('margin-right', 'calc(10% + 17px)'); //17px removed by scrollbar
 				});
+				$('.video').each(function(){
+					$(this).css('left', 'calc(10%)'); 
+					$(this).css('right', 'calc(10% + 17px)'); //17px removed by scrollbar
+					$(this).css('width', 'calc(80% - 17px)'); //17px removed by scrollbar
+				});
+				$('.backArrow').each(function(){
+					$(this).css('left', 'calc(10%)');
+				});
 				$('.pageTitle').each(function(){
 					$(this).css('margin-left', 'calc(10%)'); 
 					$(this).css('margin-right', 'calc(10% + 17px)'); //17px removed by scrollbar
@@ -65,6 +88,10 @@ $(document).ready(function(){
 					$(this).css('margin-right', 'calc(10% + 17px)'); //17px removed by scrollbar
 				});
 				$('.hamburgerOverlay').each(function(){
+					$(this).css('right', '0px'); 
+					$(this).css('padding-right', '17px');
+				});
+				$('.videoOverlay').each(function(){
 					$(this).css('right', '0px'); 
 					$(this).css('padding-right', '17px');
 				});
@@ -126,7 +153,7 @@ $(document).ready(function(){
 					});
 			}
 			//remove extra info on repertoire page when window is too small
-			if ($(window).width() < 800) {
+			if ($(window).width() < 810) {
 				$(".repertoireTable").each(function(){
 					$(this).show(); 
 				});
@@ -135,7 +162,7 @@ $(document).ready(function(){
 						adjustForScrollBar();
 					});
 				});
-				$(".repertoireTable td:nth-child(2)").each(function(){
+				$(".repertoireTable td:nth-child(3)").each(function(){
 					$(this).css('border-radius', '0 5px 5px 0'); 
 				});
 			}
@@ -146,7 +173,7 @@ $(document).ready(function(){
 				$(".hideCell").each(function(){
 					$(this).show();
 				});
-				$(".repertoireTable td:nth-child(2)").each(function(){
+				$(".repertoireTable td:nth-child(3)").each(function(){
 					$(this).css('border-radius', '0 0px 0px 0'); 
 				});
 			}
@@ -254,7 +281,7 @@ $(document).ready(function(){
 	});
 	
 	//hamburger hovers
-	var hamburgerColors = [
+	var imageColors = [
 		"-red.png",
 		"-orange.png",
 		"-yellow.png",
@@ -265,8 +292,32 @@ $(document).ready(function(){
 	$(function() {
 		$(".imageLinkRight")
 			.mouseover(function() { 
-				var hamburgerColorIndex = Math.floor(Math.random() * hamburgerColors.length);
-				var src = $(this).attr("src").replace(".png", hamburgerColors[hamburgerColorIndex]);
+				var hamburgerColorIndex = Math.floor(Math.random() * imageColors.length);
+				var src = $(this).attr("src").replace(".png", imageColors[hamburgerColorIndex]);
+				$(this).attr("src", src);
+			})
+			.mouseout(function() {
+				var src = $(this).attr("src").split('-')[0] + ".png";
+				$(this).attr("src", src);
+			});
+	});
+	$(function() {
+		$(".play")
+			.mouseover(function() { 
+				var playColorIndex = Math.floor(Math.random() * imageColors.length);
+				var src = $(this).attr("src").replace(".png", imageColors[playColorIndex]);
+				$(this).attr("src", src);
+			})
+			.mouseout(function() {
+				var src = $(this).attr("src").split('-')[0] + ".png";
+				$(this).attr("src", src);
+			});
+	});
+	$(function() {
+		$(".backArrow")
+			.mouseover(function() { 
+				var arrowColorIndex = Math.floor(Math.random() * imageColors.length);
+				var src = $(this).attr("src").replace(".png", imageColors[arrowColorIndex]);
 				$(this).attr("src", src);
 			})
 			.mouseout(function() {
@@ -296,6 +347,14 @@ $(document).ready(function(){
 				var src = $(this).attr("src").replace("-hover.png", ".png");
 				$(this).attr("src", src);
 			});
+	});
+	
+	// video overlay visibility
+	$(".play").click(function(){
+		$('.videoOverlay').fadeIn(400);
+	});
+	$(".backArrow").click(function(){
+		$('.videoOverlay').fadeOut(400);
 	});
 	
 	//showing and hiding photos when you click album titles
