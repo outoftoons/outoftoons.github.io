@@ -184,9 +184,10 @@ a.outLink:hover {
 }
 .backArrow {
 	position: absolute;
-	left: 10%;
+	left: 4.5%;
 	top: 4.5%;
 	height: 15px;
+	cursor: pointer;
 }
 .video {
 	position: absolute;
@@ -216,6 +217,7 @@ a.outLink:hover {
 	margin-bottom: -1px;
 	margin-left: 5px;
 	height: 16px;
+	cursor: pointer;
 }
 .hideCell {
 }

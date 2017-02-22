@@ -36,9 +36,6 @@ $(document).ready(function(){
 						$(this).css('right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 						$(this).css('width', 'calc(80% - 2.9px)');
 					});
-					$('.backArrow').each(function(){
-						$(this).css('left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
-					});
 					$('.pageTitle').each(function(){
 						$(this).css('margin-left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
 						$(this).css('margin-right', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
@@ -75,9 +72,6 @@ $(document).ready(function(){
 					$(this).css('left', 'calc(10%)'); 
 					$(this).css('right', 'calc(10% + 17px)'); //17px removed by scrollbar
 					$(this).css('width', 'calc(80% - 17px)'); //17px removed by scrollbar
-				});
-				$('.backArrow').each(function(){
-					$(this).css('left', 'calc(10%)');
 				});
 				$('.pageTitle').each(function(){
 					$(this).css('margin-left', 'calc(10%)'); 
