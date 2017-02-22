@@ -181,6 +181,7 @@ a.outLink:hover {
 	background-color: rgba(0,0,0,.85);
 	text-align: "center";
 	padding-right: 17px;
+	display: none;
 }
 .backArrow {
 	position: absolute;
@@ -199,6 +200,7 @@ a.outLink:hover {
 	width: 80%; /* Safari */
 	width: calc(80% - 17px);
 	height: 80%;
+	display: none;
 }
 .repertoireTable {
 	display: none;

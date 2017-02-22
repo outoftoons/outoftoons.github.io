@@ -343,12 +343,44 @@ $(document).ready(function(){
 			});
 	});
 	
-	// video overlay visibility
-	$(".play").click(function(){
+	// show correct video with each play button and show video overlay
+	$("td:contains('And So It Goes')").prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/MQWy2uD0KtA?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
+	$("td:contains('Code Monkey')").prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/2dtPpa0jQgI?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
+		$('.videoOverlay').fadeIn(400);
+	});
+	$("td:contains('Hymn Of Acxiom')").prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/bsDnGWTM8KQ?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
+		$('.videoOverlay').fadeIn(400);
+	});
+	$("td:contains('I See The Light')").prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/pxbd2VLixGM?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
+		$('.videoOverlay').fadeIn(400);
+	});
+	$('td:contains("That\'s What Friends Are For")').prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/xcza4MVbkB0?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
+		$('.videoOverlay').fadeIn(400);
+	});
+	$("td:contains('Walking On Broken Glass')").prev("td").click(function(){
+		$('.video').attr('src', 'https://www.youtube.com/embed/-qRhACg20Xc?enablejsapi=1&rel=0&autoplay=1');
+		$('.video').fadeIn(400);
+		$('.videoOverlay').fadeIn(400);
+	});
+	// hide video overlay and pause video
 	$(".backArrow").click(function(){
+		$('.video').fadeOut(400);
 		$('.videoOverlay').fadeOut(400);
+		var iframe = document.getElementsByClassName("video")[0].contentWindow;
+		func =  'pauseVideo';
+		iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
 	});
 	
 	//showing and hiding photos when you click album titles
