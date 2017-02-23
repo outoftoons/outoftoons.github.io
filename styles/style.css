@@ -210,10 +210,28 @@ a.outLink:hover {
 	background-color: rgba(80,80,80,.85);
 }
 .repertoireTable td:first-child {
-  border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
 }
 .repertoireTable td:last-child {
-  border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+}
+.repertoireTable th:nth-child(3) {
+	border-left: solid 1px gray;
+}
+.repertoireTable th:nth-child(4) {
+	border-left: solid 1px gray;
+}
+.repertoireTable th:nth-child(5) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(3) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(4) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(5) {
+	border-left: solid 1px gray;
 }
 .play {
 	margin-bottom: -1px;
