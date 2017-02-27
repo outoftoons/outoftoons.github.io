@@ -484,18 +484,7 @@ $(document).ready(function(){
 				$(this).attr("src", src);
 			});
 	});
-	$(function() {
-		$(".play")
-			.mouseover(function() { 
-				var playColorIndex = Math.floor(Math.random() * imageColors.length);
-				var src = $(this).attr("src").replace(".png", imageColors[playColorIndex]);
-				$(this).attr("src", src);
-			})
-			.mouseout(function() {
-				var src = $(this).attr("src").split('-')[0] + ".png";
-				$(this).attr("src", src);
-			});
-	});
+	//backarrow hovers
 	$(function() {
 		$(".backArrow")
 			.mouseover(function() { 
@@ -522,6 +511,18 @@ $(document).ready(function(){
 	// profile image hovering
 	$(function() {
 		$(".profileImage")
+			.mouseover(function() { 
+				var src = $(this).attr("src").replace(".png", "-hover.png");
+				$(this).attr("src", src);
+			})
+			.mouseout(function() {
+				var src = $(this).attr("src").replace("-hover.png", ".png");
+				$(this).attr("src", src);
+			});
+	});
+	// play button hovering
+	$(function() {
+		$(".play")
 			.mouseover(function() { 
 				var src = $(this).attr("src").replace(".png", "-hover.png");
 				$(this).attr("src", src);
