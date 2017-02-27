@@ -353,9 +353,11 @@ $(document).ready(function(){
 	
 	(function($) {
 		pauseVideo = function() {
-			var iframe = document.getElementsByClassName("video")[0].contentWindow;
-			func =  'pauseVideo';
-			iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+			$(".videoOverlay").each(function(){
+				var iframe = document.getElementsByClassName("video")[0].contentWindow;
+				func =  'pauseVideo';
+				iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+			});
 		}
 	})(jQuery);
 	
