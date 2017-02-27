@@ -147,7 +147,7 @@ $(document).ready(function(){
 					});
 			}
 			//remove extra info on repertoire page when window is too small
-			if ($(window).width() < 810) {
+			if ($(window).width() < 830) {
 				$(".repertoireTable").each(function(){
 					$(this).show(); 
 				});
@@ -159,6 +159,105 @@ $(document).ready(function(){
 				$(".repertoireTable td:nth-child(3)").each(function(){
 					$(this).css('border-radius', '0 5px 5px 0'); 
 				});
+				//adjust rows in table based on page size. This is done because there was a bug with the text wrapping differently when there was and was not a scrollbar. The adjustForScrollBar function would get screwed up.
+				//This will need to be reexamined every time a song is added
+				if ($(window).width() < 435) {
+					//song
+					$("td:contains('00000')").html("00000<br>Million");
+					$("td:contains('And So')").html("And So<br>It Goes");
+					$("td:contains('Code')").html("Code<br>Monkey");
+					$("td:contains('Down In')").html("Down In<br>The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of<br>Acxiom");
+					$("td:contains('I Am Not')").html("I Am Not<br>Yours");
+					$("td:contains('I See')").html("I See<br>The Light");
+					$("td:contains('It-Splay')").html("It-Splay<br>Out The<br>Back Way");
+					$("td:contains('Run To')").html("Run To<br>You");
+					$("td:contains('Some')").html("Some<br>Nights");
+					$('td:contains("That\'s")').html("That\'s<br>What<br>Friends<br>Are For");
+					$("td:contains('Video')").html("Video<br>Killed The<br>Radio Star");
+					$("td:contains('Walking')").html("Walking<br>On Broken<br>Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon<br>Coultan");
+					$("td:contains('Walk The')").html("Walk The<br>Moon");
+					$("td:contains('Randall')").html("Randall<br>Stroope<br>Sara<br>Teasdale");
+					$("td:contains('Ariella')").html("Dana<br>Gretton<br>Ariella<br>Prosch<br>Newman");
+					$("td:contains('The Jungle')").html("The Jungle<br>Book");
+					$("td:contains('Annie')").html("Annie<br>Lennox");
+				}
+				else if ($(window).width() < 490) {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In<br>The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What<br>Friends Are For");
+					$("td:contains('Video')").html("Video Killed<br>The Radio Star");
+					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch<br>Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
+				else if ($(window).width() <600) {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In<br>The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What<br>Friends Are For");
+					$("td:contains('Video')").html("Video Killed<br>The Radio Star");
+					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
+				else {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('It-Splay')").html('It-Splay Out The Back Way');
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html('It-Splay Out The Back Way');
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What Friends Are For");
+					$("td:contains('Video')").html("Video Killed The Radio Star");
+					$("td:contains('Walking')").html("Walking On Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
 			}
 			else {
 				$(".repertoireTable").each(function(){
@@ -170,16 +269,104 @@ $(document).ready(function(){
 				$(".repertoireTable td:nth-child(3)").each(function(){
 					$(this).css('border-radius', '0 0px 0px 0'); 
 				});
+				//adjust rows in table based on page size. This is done because there was a bug with the text wrapping differently when there was and was not a scrollbar. The adjustForScrollBar function would get screwed up
+				//This will need to be reexamined every time a song is added
+				if ($(window).width() < 890) {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In<br>The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What<br>Friends Are For");
+					$("td:contains('Video')").html("Video Killed<br>The Radio Star");
+					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch<br>Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
+				else if ($(window).width() < 980) {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In<br>The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html("It-Splay Out<br>The Back Way");
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What<br>Friends Are For");
+					$("td:contains('Video')").html("Video Killed<br>The Radio Star");
+					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
+				else {
+					//song
+					$("td:contains('00000')").html("00000 Million");
+					$("td:contains('And So')").html("And So It Goes");
+					$("td:contains('Code')").html("Code Monkey");
+					$("td:contains('Down In')").html("Down In The Dumps");
+					$("td:contains('Hymn Of')").html("Hymn Of Acxiom");
+					$("td:contains('It-Splay')").html('It-Splay Out The Back Way');
+					$("td:contains('I Am Not')").html("I Am Not Yours");
+					$("td:contains('I See')").html("I See The Light");
+					$("td:contains('It-Splay')").html('It-Splay Out The Back Way');
+					$("td:contains('Run To')").html("Run To You");
+					$("td:contains('Some')").html("Some Nights");
+					$('td:contains("That\'s")').html("That\'s What Friends Are For");
+					$("td:contains('Video')").html("Video Killed The Radio Star");
+					$("td:contains('Walking')").html("Walking On Broken Glass");
+					//artist
+					$("td:contains('Simon And')").html("Simon And Garfunkel");
+					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Walk The')").html("Walk The Moon");
+					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
+					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
+					$("td:contains('The Jungle')").html("The Jungle Book");
+					$("td:contains('Annie')").html("Annie Lennox");
+				}
 			}
 			adjustForScrollBar();
 		}
 	})(jQuery);
 	
+	(function($) {
+		pauseVideo = function() {
+			var iframe = document.getElementsByClassName("video")[0].contentWindow;
+			func =  'pauseVideo';
+			iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+		}
+	})(jQuery);
+	
+	
 	adjustForWindowResize();
+	pauseVideo();
 
 	//this one prevents it from running before the content loads
 	window.onload =(function(){
 		adjustForWindowResize();
+		pauseVideo();
 	});
 	
 	//what to do on window resize
@@ -378,9 +565,7 @@ $(document).ready(function(){
 	$(".backArrow").click(function(){
 		$('.video').fadeOut(400);
 		$('.videoOverlay').fadeOut(400);
-		var iframe = document.getElementsByClassName("video")[0].contentWindow;
-		func =  'pauseVideo';
-		iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+		pauseVideo();
 	});
 	
 	//showing and hiding photos when you click album titles

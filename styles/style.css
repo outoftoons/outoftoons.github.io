@@ -205,6 +205,7 @@ a.outLink:hover {
 .repertoireTable {
 	display: none;
 	border-collapse: collapse;
+	white-space: nowrap;
 }
 .repertoireTable tr:nth-child(even) {
 	background-color: rgba(80,80,80,.85);
