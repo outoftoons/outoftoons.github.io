@@ -208,7 +208,7 @@ a.outLink:hover {
 	white-space: nowrap;
 }
 .repertoireTable tr:nth-child(even) {
-	background-color: rgba(80,80,80,.85);
+	background-color: rgba(90,90,90,.85);
 }
 .repertoireTable td:first-child {
 	border-radius: 5px 0 0 5px;
