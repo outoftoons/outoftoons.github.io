@@ -10,10 +10,11 @@ body {
 	background: rgb(220,220,220);
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 .hamburgerOverlay {
 	position: absolute;
-	top: 87px;
+	top: calc(5.9259vw + 87px);
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
@@ -25,15 +26,18 @@ body {
 }
 .heading {
 	position: absolute;
-	height: 85px;
+	height: calc(5.9259vw + 85px);
 	top: 0px;
 	left: 0px;
 	right: 0px;
 	z-index: 3;
-	overflow: hidden;
 	background-color:rgba(0,0,0,.85);
 }
+.banner{
+	width:100%;
+}
 .headingTable {
+	margin-top: -3px;
 	width: 100%;
 	white-space: nowrap;
 	z-index: 1;
@@ -87,7 +91,7 @@ a.outLink:hover {
 }
 .headingLine{
 	position: absolute;
-	top: 85px;
+	top: calc(5.9259vw + 85px);
 	left: 0px;
 	right: 0px;
 	height: 2px;
@@ -125,8 +129,29 @@ a.outLink:hover {
 	bottom: 0px;
 	overflow-y: auto;
 }
+.homeContent {
+	z-index: 1;
+	text-align: center;
+	padding-top: calc(5.9259vw + 87px);
+}
+.homeImage{
+	max-height: calc(100vh - 5.9259vw - 87px);
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: calc(.5*(100vh + 5.9259vw + 87px));
+	transform: translate(-50%, -50%);
+}
+.homeImage2{
+	max-height: calc(100vh - 5.9259vw - 87px);
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: calc(.5*(100vh + 5.9259vw + 87px));
+	transform: translate(-50%, -50%);
+}
 .pageTitle {
-	margin-top: 90px;
+	margin-top: calc(5.9259vw + 90px);
 	margin-left: 10%;
 	margin-right: 11%; /* Safari */
 	margin-right: calc(10% + 17px);

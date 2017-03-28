@@ -26,6 +26,7 @@ $(document).ready(function(){
 					});
 					$('.headingTable').each(function(){
 						$(this).css('padding-right', '0px');
+						$(this).css('margin-top', '-3px');
 					});
 					$('.content').each(function(){
 						$(this).css('margin-left', 'calc(10% + 1.3px)'); //10% of the 17px removed by scrollbar
@@ -63,6 +64,7 @@ $(document).ready(function(){
 				});
 				$('.headingTable').each(function(){
 					$(this).css('padding-right', '17px'); //17px removed by scrollbar
+					$(this).css('margin-top', '-4px');
 				});
 				$('.content').each(function(){
 					$(this).css('margin-left', 'calc(10%)'); 
@@ -107,12 +109,12 @@ $(document).ready(function(){
 					});
 					$(this).next('td').next('td').next('td').hide();
 				});
-				if ($(window).height()< 460){
+				if ($(window).height()< 510){
 					$(".hamburgerLink").each(function(){
-						$(this).css('font-size', '16px');
+						$(this).css('font-size', '14px');
 					});
 				}
-				else if ($(window).height()> 620){
+				else if ($(window).height()> 680){
 					$(".hamburgerLink").each(function(){
 						$(this).css('font-size', '40px');
 					});
@@ -122,8 +124,18 @@ $(document).ready(function(){
 						$(this).css('font-size', '22px');
 					});
 				}
+				if ($(window).width() < 720) {
+					$('.homeImage').hide();
+					$('.homeImage2').show();
+				}
+				else {
+					$('.homeImage').show();
+					$('.homeImage2').hide();
+				}
 			}
 			else {
+				$('.homeImage').show();
+				$('.homeImage2').hide();
 				$('.hamburgerOverlay').fadeOut(400);
 				$('.headingTable td:has(span)').each(function(){
 					$(this).prev('td').fadeOut(0, function(){
@@ -484,6 +496,20 @@ $(document).ready(function(){
 				$(this).attr("src", src);
 			});
 	});
+	
+	//assign home image hover 
+	$(function() {
+		$(".homeImage")
+			.mouseover(function() { 
+				var src = $(this).attr("src").replace(".png", "-hover.png");
+				$(this).attr("src", src);
+			})
+			.mouseout(function() {
+				var src = $(this).attr("src").replace("-hover.png", ".png");
+				$(this).attr("src", src);
+			});
+	});	
+	
 	//backarrow hovers
 	$(function() {
 		$(".backArrow")
