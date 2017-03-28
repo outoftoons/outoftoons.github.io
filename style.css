@@ -1,0 +1,305 @@
+@font-face {
+	font-family: 'Calibri';
+    src: url('Fonts/Calibri/Calibri.eot') format('embedded-opentype'); /* IE9 and later */
+    src: url('Fonts/Calibri/Calibri.eot?#iefix') format('embedded-opentype'), /* IE6 to IE8  */
+         url('Fonts/Calibri/Calibri.woff') format('woff'),  /* Modern Browsers */
+         url('Fonts/Calibri/Calibri.ttf') format('truetype'), /* Safari, iOS, Chrome, Android, Firefox and Opera except Opera Mini  */
+         url('Fonts/Calibri/Calibri.svg#Min_font + regular, italic, bold') format('svg'); /* Legacy iOS */
+}
+body {
+	background: rgb(220,220,220);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.hamburgerOverlay {
+	position: absolute;
+	top: calc(5.9259vw + 87px);
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 3;
+	overflow-y: hidden;
+	background-color: rgba(0,0,0,.85);
+	text-align: "center";
+	padding-right: 17px;
+}
+.heading {
+	position: absolute;
+	height: calc(5.9259vw + 85px);
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 3;
+	background-color:rgba(0,0,0,.85);
+}
+.banner{
+	width:100%;
+}
+.headingTable {
+	margin-top: -3px;
+	width: 100%;
+	white-space: nowrap;
+	z-index: 1;
+	padding-right: 17px;
+}
+.logo {
+	position: relative;
+	top: 2px;
+	height: 75px;
+	margin-left: 20px;
+	border: none;
+	text-decoration: none;
+}
+.headingLink {
+	font-family: Calibri;
+	font-size: 22px;
+	color: white;
+	position: relative;
+	text-decoration: none;
+}
+.imageLink {
+	position: relative;
+	top: 2px;
+	height: 30px;
+	border: none;
+}
+.imageLinkRight {
+	position: relative;
+	top: 2px;
+	margin-right: 20px;
+	height: 30px;
+	border: none;
+}
+.hamburgerLink {
+	font-family: Calibri;
+	font-size: 22px;
+	color: white;
+	position: relative;
+	text-decoration: none;
+}
+a.outLink{
+	text-decoration: none;
+}
+a.outLink:hover {
+	color: white;
+}
+.hamburger {
+	position: relative;
+	text-decoration: none;
+	cursor: pointer;
+}
+.headingLine{
+	position: absolute;
+	top: calc(5.9259vw + 85px);
+	left: 0px;
+	right: 0px;
+	height: 2px;
+	z-index: 3;
+	background: rgba(255,0,0,.85); /* IE before IE10. No animation */
+	animation: headingLine 30s;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: headingLine; /* Safari */
+	-webkit-animation-duration: 30s; /* Safari */
+	-webkit-animation-iteration-count: infinite; /* Safari */
+}
+@keyframes headingLine {
+	0%  {background: rgba(255,0,0,.85);}
+	17%  {background: rgba(255,165,0,.85);}
+	33%  {background: rgba(255,255,0,.85);}
+	50%  {background: rgba(0,255,0,.85);}
+	67%  {background: rgba(0,0,255,.85);}
+	83%  {background: rgba(128,0,128,.85);}
+	100% {background: rgba(255,0,0,.85);} 
+}
+@-webkit-keyframes headingLine {  /* Safari */
+	0%  {background: rgba(255,0,0,.85);}
+	17%  {background: rgba(255,165,0,.85);}
+	33%  {background: rgba(255,255,0,.85);}
+	50%  {background: rgba(0,255,0,.85);}
+	67%  {background: rgba(0,0,255,.85);}
+	83%  {background: rgba(128,0,128,.85);}
+	100% {background: rgba(255,0,0,.85);}
+}
+.scrollable {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow-y: auto;
+}
+.homeContent {
+	z-index: 1;
+	text-align: center;
+	padding-top: calc(5.9259vw + 87px);
+}
+.homeImage{
+	max-height: calc(100vh - 5.9259vw - 87px);
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: calc(.5*(100vh + 5.9259vw + 87px));
+	transform: translate(-50%, -50%);
+}
+.homeImage2{
+	max-height: calc(100vh - 5.9259vw - 87px);
+	max-width: 100%;
+	position: absolute;
+	left: 50%;
+	top: calc(.5*(100vh + 5.9259vw + 87px));
+	transform: translate(-50%, -50%);
+}
+.pageTitle {
+	margin-top: calc(5.9259vw + 90px);
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	z-index: 1;
+	text-align: center;
+	font-size: 50px;
+	font-family: Calibri;
+	display: block;
+}
+.hr {
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	z-index: 1;
+	display: block;
+}
+.content {
+	margin-left: 10%;
+	margin-right: 11%; /* Safari */
+	margin-right: calc(10% + 17px);
+	margin-bottom: 36px;
+	z-index: 1;
+	text-align: center;
+	background-color: rgba(0,0,0,.85);
+	padding: 10px;
+}
+.text {
+	font-family: Calibri;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	display: block;
+}
+.memberTable {
+	width: 100%;
+}
+.profileImage {
+	position: relative;
+	width: 95%;
+	max-width: 300px;
+	border-width: 4px;
+	border-style: solid;
+}
+.videoOverlay {
+	position: absolute;
+	top: 87px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 2;
+	overflow-y: hidden;
+	background-color: rgba(0,0,0,.85);
+	text-align: "center";
+	padding-right: 17px;
+	display: none;
+}
+.backArrow {
+	position: absolute;
+	left: 4.5%;
+	top: 4.5%;
+	height: 15px;
+	cursor: pointer;
+}
+.video {
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+	right: 11%; /* Safari */
+	right: calc(10% + 17px);
+	width: 80%; /* Safari */
+	width: calc(80% - 17px);
+	height: 80%;
+	display: none;
+}
+.repertoireTable {
+	display: none;
+	border-collapse: collapse;
+	white-space: nowrap;
+}
+.repertoireTable tr:nth-child(even) {
+	background-color: rgba(90,90,90,.85);
+}
+.repertoireTable td:first-child {
+	border-radius: 5px 0 0 5px;
+}
+.repertoireTable td:last-child {
+	border-radius: 0 5px 5px 0;
+}
+.repertoireTable th:nth-child(3) {
+	border-left: solid 1px gray;
+}
+.repertoireTable th:nth-child(4) {
+	border-left: solid 1px gray;
+}
+.repertoireTable th:nth-child(5) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(3) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(4) {
+	border-left: solid 1px gray;
+}
+.repertoireTable td:nth-child(5) {
+	border-left: solid 1px gray;
+}
+.play {
+	margin-bottom: -1px;
+	margin-left: 5px;
+	height: 16px;
+	cursor: pointer;
+}
+.hideCell {
+}
+.albumTitle {
+	position: relative;
+	font-family: Calibri;
+	font-size: 20px;
+	color: white;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+.album {
+	display: none;
+}
+.albumImage {
+	position: relative;
+	display: block;
+	width: calc(100% - 20px);
+	max-width: 960px;
+	margin: auto;
+}
+.textbox { 
+	resize: none;
+	width: 90%;
+	font-family: Calibri;
+	font-size: 20px;
+}
+.submit {
+	font-family: Calibri;
+	font-size: 20px;
+	color: rgba(0,0,0,.85);
+	cursor: pointer;
+	background-color: rgb(220,220,220);
+}
+.submit:hover {
+	background-color: rgb(200,200,200);
+}
