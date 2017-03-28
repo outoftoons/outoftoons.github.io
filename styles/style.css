@@ -197,7 +197,7 @@ a.outLink:hover {
 }
 .videoOverlay {
 	position: absolute;
-	top: 87px;
+	top: calc(5.9259vw + 87px);
 	left: 0px;
 	right: 0px;
 	bottom: 0px;

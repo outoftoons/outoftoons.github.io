@@ -146,6 +146,14 @@ $(document).ready(function(){
 					});
 					$(this).next('td').next('td').next('td').hide();
 				});
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.35)"); }, 50);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.50)"); }, 100);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.70)"); }, 150);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.75)"); }, 200);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.80)"); }, 250);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.82)"); }, 300);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.84)"); }, 350);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.85)"); }, 400);
 			}
 			//move pics closer together on bigger screen
 			if ($(window).width() > 1300) {
@@ -190,7 +198,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking<br>On Broken<br>Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon<br>Coultan");
+					$("td:contains('Coultan')").html("Jonathon<br>Coultan");
 					$("td:contains('Walk The')").html("Walk The<br>Moon");
 					$("td:contains('Randall')").html("Randall<br>Stroope<br>Sara<br>Teasdale");
 					$("td:contains('Ariella')").html("Dana<br>Gretton<br>Ariella<br>Prosch<br>Newman");
@@ -214,7 +222,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch<br>Newman");
@@ -238,7 +246,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
@@ -263,7 +271,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
@@ -301,7 +309,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And<br>Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch<br>Newman");
@@ -326,7 +334,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On<br>Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
@@ -351,7 +359,7 @@ $(document).ready(function(){
 					$("td:contains('Walking')").html("Walking On Broken Glass");
 					//artist
 					$("td:contains('Simon And')").html("Simon And Garfunkel");
-					$("td:contains('Jonathon Coultan')").html("Jonathon Coultan");
+					$("td:contains('Coultan')").html("Jonathon Coultan");
 					$("td:contains('Walk The')").html("Walk The Moon");
 					$("td:contains('Randall')").html("Randall Stroope<br>Sara Teasdale");
 					$("td:contains('Ariella')").html("Dana Gretton<br>Ariella Prosch Newman");
@@ -368,6 +376,16 @@ $(document).ready(function(){
 			$(".videoOverlay").each(function(){
 				var iframe = document.getElementsByClassName("video")[0].contentWindow;
 				func =  'pauseVideo';
+				iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+			});
+		}
+	})(jQuery);
+	
+	(function($) {
+		playVideo = function() {
+			$(".videoOverlay").each(function(){
+				var iframe = document.getElementsByClassName("video")[0].contentWindow;
+				func =  'playVideo';
 				iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
 			});
 		}
@@ -528,9 +546,31 @@ $(document).ready(function(){
 	$(".hamburger").click(function(){
 		if ( $(".hamburgerOverlay").is(":visible") ) {
 			$('.hamburgerOverlay').fadeOut(400);
+			if ( $(".videoOverlay").is(":visible") ) {
+				playVideo();
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.35)"); }, 50);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.50)"); }, 100);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.70)"); }, 150);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.75)"); }, 200);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.80)"); }, 250);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.82)"); }, 300);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.84)"); }, 350);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.85)"); }, 400);
+			}
 		}
 		else {
 			$('.hamburgerOverlay').fadeIn(400);
+			if ( $(".videoOverlay").is(":visible") ) {
+				pauseVideo();
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.84)"); }, 50);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.80)"); }, 100);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.75)"); }, 150);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.67)"); }, 200);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.55)"); }, 250);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.35)"); }, 300);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.12)"); }, 350);
+				setTimeout(function(){ $('.videoOverlay').css("background-color", "rgba(0,0,0,.00)"); }, 400);
+			}
 		}
 	});
 	
@@ -560,32 +600,32 @@ $(document).ready(function(){
 	});
 	
 	// show correct video with each play button and show video overlay
-	$("td:contains('And So It Goes')").prev("td").click(function(){
+	$("td:contains('And So')").prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/MQWy2uD0KtA?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
-	$("td:contains('Code Monkey')").prev("td").click(function(){
+	$("td:contains('Code')").prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/2dtPpa0jQgI?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
-	$("td:contains('Hymn Of Acxiom')").prev("td").click(function(){
+	$("td:contains('Hymn Of')").prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/bsDnGWTM8KQ?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
-	$("td:contains('I See The Light')").prev("td").click(function(){
+	$("td:contains('I See')").prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/pxbd2VLixGM?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
-	$('td:contains("That\'s What Friends Are For")').prev("td").click(function(){
+	$('td:contains("That\'s")').prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/xcza4MVbkB0?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
 	});
-	$("td:contains('Walking On Broken Glass')").prev("td").click(function(){
+	$("td:contains('Walking')").prev("td").click(function(){
 		$('.video').attr('src', 'https://www.youtube.com/embed/-qRhACg20Xc?enablejsapi=1&rel=0&autoplay=1');
 		$('.video').fadeIn(400);
 		$('.videoOverlay').fadeIn(400);
