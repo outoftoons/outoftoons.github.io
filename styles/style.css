@@ -107,8 +107,8 @@ a.outLink:hover {
 	0%  {background: rgba(255,0,0,.85);}
 	17%  {background: rgba(255,165,0,.85);}
 	33%  {background: rgba(255,255,0,.85);}
-	50%  {background: rgba(0,255,0,.85);}
-	67%  {background: rgba(0,0,255,.85);}
+	50%  {background: rgba(50,205,50,.85);}
+	67%  {background: rgba(0,40,255,.85);}
 	83%  {background: rgba(128,0,128,.85);}
 	100% {background: rgba(255,0,0,.85);} 
 }
@@ -116,8 +116,8 @@ a.outLink:hover {
 	0%  {background: rgba(255,0,0,.85);}
 	17%  {background: rgba(255,165,0,.85);}
 	33%  {background: rgba(255,255,0,.85);}
-	50%  {background: rgba(0,255,0,.85);}
-	67%  {background: rgba(0,0,255,.85);}
+	50%  {background: rgba(50,205,50,.85);}
+	67%  {background: rgba(0,40,255,.85);}
 	83%  {background: rgba(128,0,128,.85);}
 	100% {background: rgba(255,0,0,.85);}
 }

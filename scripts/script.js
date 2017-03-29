@@ -83,10 +83,18 @@ $(document).ready(function(){
 					$(this).css('margin-left', 'calc(10%)'); 
 					$(this).css('margin-right', 'calc(10% + 17px)'); //17px removed by scrollbar
 				});
-				$('.hamburgerOverlay').each(function(){
-					$(this).css('right', '0px'); 
-					$(this).css('padding-right', '17px');
-				});
+				if ( $(".homeContent").is(":visible") ) {
+					$('.hamburgerOverlay').each(function(){
+						$(this).css('right', '-8px'); 
+						$(this).css('padding-right', '0px');
+					});
+				}
+				else {
+					$('.hamburgerOverlay').each(function(){
+						$(this).css('right', '0px'); 
+						$(this).css('padding-right', '17px');
+					});
+				}
 				$('.videoOverlay').each(function(){
 					$(this).css('right', '0px'); 
 					$(this).css('padding-right', '17px');
@@ -425,12 +433,12 @@ $(document).ready(function(){
 		$(this).css('color','');
 	});
 	$(".headingLink:contains('Repertoire')").hover(function(){
-		$(this).css('color', 'lime');
+		$(this).css('color', 'limegreen');
 	},function(){
 		$(this).css('color','');
 	});
 	$(".headingLink:contains('Photos')").hover(function(){
-		$(this).css('color', 'blue');
+		$(this).css('color', 'rgb(0,40,255)');
 	},function(){
 		$(this).css('color','');
 	});
@@ -455,12 +463,12 @@ $(document).ready(function(){
 		$(this).css('color','');
 	});
 	$(".hamburgerLink:contains('Repertoire')").hover(function(){
-		$(this).css('color', 'lime');
+		$(this).css('color', 'limegreen');
 	},function(){
 		$(this).css('color','');
 	});
 	$(".hamburgerLink:contains('Photos')").hover(function(){
-		$(this).css('color', 'blue');
+		$(this).css('color', 'rgb(0,40,255)');
 	},function(){
 		$(this).css('color','');
 	});
@@ -498,7 +506,7 @@ $(document).ready(function(){
 		"-red.png",
 		"-orange.png",
 		"-yellow.png",
-		"-lime.png",
+		"-limegreen.png",
 		"-blue.png",
 		"-purple.png"    
 	];
@@ -649,8 +657,8 @@ $(document).ready(function(){
 		"red",
 		"orange",
 		"yellow",
-		"lime",
-		"blue",
+		"limegreen",
+		"rgb(0,40,255)",
 		"purple"    
 	];
 	$('.outLink').each(function(){
