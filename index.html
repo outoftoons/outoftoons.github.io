@@ -1,132 +1,392 @@
 <!DOCTYPE html>
-<html>
-	<title>
-		Out of Toons
-	</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-	</script>
-	<script src="scripts/script.js">
-	</script>
-	<head>
-		<link rel="stylesheet" type="text/css" href="styles/style.css">
-		<link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico">
-		<meta name="viewport" content="width=device-width, initial-scale=.65">
-	</head>
-	<body>
-		<div class="hamburgerOverlay" style="display:none">
-			<br>
-			<span style="display:block; text-align:center;">
-				<a href="News/" class="hamburgerLink">
-					News
-				</a>
-				<br>
-				<br>
-				<a href="About/" class="hamburgerLink">
-					About
-				</a>
-				<br>
-				<br>
-				<a href="Members/" class="hamburgerLink">
-					Members
-				</a>
-				<br>
-				<br>
-				<a href="Repertoire/" class="hamburgerLink">
-					Repertoire
-				</a>
-				<br>
-				<br>
-				<a href="Photos/" class="hamburgerLink">
-					Photos
-				</a>
-				<br>
-				<br>
-				<a href="Contact/" class="hamburgerLink" >
-					Contact
-				</a>
-				<br>
-				<br>
-				<a href="https://www.facebook.com/outoftoons/" target="blank" class="hamburgerLink">
-					Facebook
-				</a>
-				<br>
-				<br>
-				<a href="https://www.youtube.com/user/toonsalums/" target="blank" class="hamburgerLink">
-					YouTube
-				</a>
-			</span>
+<html lang="en">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="scripts/scripts.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" data-auto-replace-svg="nest"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Chela+One" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="canonical" href="http://www.outoftoons.com/" />
+	<title>Out Of Toons</title>
+</head>
+<body>
+	<nav>
+		<div>
+			<a href="#Events">Events</a>
+			<a href="#About">About</a>
+			<a href="#Members">Members</a>
+			<a href="#Repertoire">Repertoire</a>
 		</div>
-		<div class="heading">
-			<img src="Images/banner/banner.png" class="banner">
-			<table class="headingTable">
-				<tr>
-					<td width=26% align="right">
-						<a href="javascript:window.location.reload()">
-							<img src="Images/OOT.png" class="logo">
-						</a>
-					</td>
-					<td width=48% align="center">
-					</td>
-					<td width=48% align="center"  style="display:none">
-						<a href="News/" class="headingLink">
-							News
-						</a>
-						<span>
-							&ensp;
-						</span>
-						<a href="About/" class="headingLink">
-							About
-						</a>
-						<span>
-							&ensp;
-						</span>
-						<a href="Members/" class="headingLink">
-							Members
-						</a>
-						<span>
-							&ensp;
-						</span>
-						<a href="Repertoire/" class="headingLink">
-							Repertoire
-						</a>
-						<span>
-							&ensp;
-						</span>
-						<a href="Photos/" class="headingLink">
-							Photos
-						</a>
-						<span>
-							&ensp;
-						</span>
-						<a href="Contact/" class="headingLink" >
-							Contact
-						</a>
-					</td>
-					<td width=26% align="left" style="display:none">
-						<a href="https://www.facebook.com/outoftoons/" target="blank" class="outLink">
-							<img src="Images/facebook/facebook.png" class="imageLink">
-						</a>
-						<a href="https://www.youtube.com/user/toonsalums/" target="blank" class="outLink">
-							<img src="Images/youtube/youtube.png" class="imageLink">
-						</a>
-					</td>
-					<td width=26% align="right" style="display:none">
-						<a class="hamburger">
-							<img src="Images/hamburger/hamburger.png" class="imageLinkRight">
-						</a>
-					</td>
-					<td width=26% align="right">
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="headingLine">
-		</div>
-		<div class="scrollable">
-			<div class="homeContent">
-				<img src="Images/home/home.png" class="homeImage">
-				<img src="Images/home/home2.png" class="homeImage2">
+		<span id="hamburger">
+			<!--This span is because will be inivisible but on top of the
+			following span. So now, the mouseover for the hamburger color change
+			will be based on hovering over this span-->
+		</span>
+		<span>
+			<i class="fas fa-bars"></i>
+		</span>
+
+	</nav>
+	<header>
+		<h1>
+			Out of Toons
+		</h1>
+	</header>
+
+	<main>
+		<section id="Events">
+			<h2>
+				Events
+			</h2>
+			<div>
+				The Out of Toons do not currently have any events scheduled. Check back here or on <a href="https://www.facebook.com/outoftoons" target="blank">
+				our Facebook page</a> for future events.
 			</div>
+		</section>
+		<section id="About">
+			<h2>
+				About
+			</h2>
+			<div>
+				When we were in college, we were all members of an a cappella group called <a href="http://web.mit.edu/toons" target="blank">
+				The MIT/Wellesley Toons</a>. After graduating, we all missed singing so much that
+				we decided to start an alum group called the Out of Toons in September 2014. We are born out of a pure love for singing together in harmony. None of us
+				are professional musicians; as a matter of fact, our professions could not be more different. Our members consist of engineers, computer programmers,
+				and arts professionals, but we are united under our passion for music, performance, and colorful bow ties. We arrange our own songs and have fun
+				supporting each other’s experimentation in musical arrangements. We are eager to share our love of acappella music with the Boston area!
+			</div>
+		</section>
+		<section id="Members">
+			<h2>
+				Members
+			</h2>
+			<div id="membersGrid">
+				<span>
+					<img style="border-color:rgb(255,20,147);"src="images/Headshots/Cheetiri Smith/CheetiriSmith.png">
+					<div>
+						Cheetiri Smith
+					</div>
+				</span>
+				<span>
+					<img style="border-color:cyan;" src="images/Headshots/Dana Gretton/DanaGretton.png">
+					<div>
+						Dana Gretton
+					</div>
+				</span>
+				<span>
+					<img style="border-color:orange;" src="images/Headshots/Ian Osborn/IanOsborn.png">
+					<div>
+						Ian Osborn
+					</div>
+				</span>
+				<span>
+					<img style="border-color:rgb(255,0,0);" src="images/Headshots/Mayla Thompson/MaylaThompson.png">
+					<div>
+						Mayla Thompson
+					</div>
+				</span>
+				<span>
+					<img style="border-color:rgb(255,182,193);" src="images/Headshots/Lauren Casas/LaurenCasas.png">
+					<div>
+						Lauren Casas
+					</div>
+				</span>
+				<span>
+					<img style="border-color:green;" src="images/Headshots/Elia Speer/EliaSpeer.png">
+					<div>
+						Elia Speer
+					</div>
+				</span>
+				<span>
+					<img style="border-color:purple;" src="images/Headshots/Sruthi Narayanan/SruthiNarayanan.png">
+					<div>
+						Sruthi Narayanan
+					</div>
+				</span>
+				<span>
+					<img style="border-color:silver;" src="images/Headshots/Vannessa Greenleaf/VannessaGreenleaf.png">
+					<div>
+						Vannessa Greenleaf
+					</div>
+				</span>
+				<span>
+					<img style="border-color:blue;" src="images/Headshots/Yuri Lin/YuriLin.png">
+					<div>
+						Yuri Lin
+					</div>
+				</span>
+				<span>
+					<div>
+						
+					</div>
+				</span>
+				<span>
+					<img style="border-color:yellow;" src="images/Headshots/Zach Casas/ZachCasas.png">
+					<div>
+						Zach Casas
+					</div>
+				</span>
+			</div>
+		</section>
+		<section id="Repertoire">
+			<h2>
+				Repertoire
+			</h2>
+			<div id="repertoireGrid">
+				<span>
+					Song
+				</span>
+				<span>
+					Artist
+				</span>
+				<span>
+					Arranger
+				</span>
+				<span>
+					Soloist
+				</span>
+				<span>
+					America
+				</span>
+				<span>
+					Simon & Garfunkel
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Army
+				</span>
+				<span>
+					Ben Folds
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Ian Osborn
+				</span>
+				<span>
+					Code Monkey
+				</span>
+				<span>
+					Jonathon Coultan
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Ian Osborn
+				</span>
+				<span>
+					Down In The Dumps
+				</span>
+				<span>
+					Walk The Moon
+				</span>
+				<span>
+					Ian Osborn
+				</span>
+				<span>
+					Lauren Casas
+				</span>
+				<span>
+					Find Me
+				</span>
+				<span>
+					Sigma and Birdy
+				</span>
+				<span>
+					Ian Osborn
+				</span>
+				<span>
+					Sruthi Narayanan
+				</span>
+				<span>
+					The Hymn of Acxiom
+				</span>
+				<span>
+					Vienna Teng
+				</span>
+				<span>
+					Dana Gretton
+				</span>
+				<span>
+
+				</span>
+				<span>
+					It-Splay Out The Back Way
+				</span>
+				<span>
+					Dana Gretton and Ariella Prosch Newman
+				</span>
+				<span>
+				</span>
+				<span>
+					Dana Gretton and Vannessa Greenleaf
+				</span>
+				<span>
+					No Roots
+				</span>
+				<span>
+					Alice Merton
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Cheetiri Smith
+				</span>
+				<span>
+					The Other Side
+				</span>
+				<span>
+					Hugh Jackman and Zac Efron
+				</span>
+				<span>
+					Zach Casas
+				</span>
+				<span>
+					Zach Casas and Dana Gretton
+				</span>
+				<span>
+					Philosphize In It! Chemicalize With It!
+				</span>
+				<span>
+					Kishi Bashi
+				</span>
+				<span>
+					Sruthi Narayanan
+				</span>
+				<span>
+					Dana Gretton
+				</span>
+				<span>
+					Some Nights
+				</span>
+				<span>
+					fun.
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Lauren Casas
+				</span>
+				<span>
+					The Sound of Silence
+				</span>
+				<span>
+					Pentatonix
+				</span>
+				<span>
+				
+				</span>
+				<span>
+				
+				</span>
+				<span>
+					Thank You
+				</span>
+				<span>
+					Boyz II Men
+				</span>
+				<span>
+
+				</span>
+				<span>
+					Cheetiri Smith
+				</span>
+				<span>
+					That's What Friends Are For
+				</span>
+				<span>
+					The Jungle Book
+				</span>
+				<span>
+					Sruthi Narayanan
+				</span>
+				<span>
+
+				</span>
+				<span>
+					Try Everything
+				</span>
+				<span>
+					Shakira
+				</span>
+				<span>
+					Dana Gretton
+				</span>
+				<span>
+					Yuri Lin
+				</span>
+				<span>
+					Two Points For Honesty
+				</span>
+				<span>
+					Guster
+				</span>
+				<span>
+					Elia Speer
+				</span>
+				<span>
+					Yuri Lin
+				</span>
+				<span>
+					Walking On Broken Glass
+				</span>
+				<span>
+					Annie Lennox
+				</span>
+				<span>
+					Jon Lee
+				</span>
+				<span>
+					Sruthi Narayanan
+				</span>
+				<span>
+					Warriors (She-Ra and the Princesses of Power Theme Song)
+				</span>
+				<span>
+					Aaliya Rose
+				</span>
+				<span>
+					Zach Casas
+				</span>
+				<span>
+					Mayla Thompson
+				</span>
+				<span>
+					We Found Love/ Without You
+				</span>
+				<span>
+					Calvin Harris and Rihanna/ David Guetta and Usher
+				</span>
+				<span>
+					Sruthi Narayanan
+				</span>
+				<span>
+					Vannessa Greenleaf
+				</span>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div>
+			<a href="https://www.facebook.com/outoftoons" target="blank" id="fb">
+				<i class="fab fa-facebook-square"></i>
+			</a>
+			<a href="https://www.youtube.com/toonsalums" target="blank" id="yt">
+				<i class="fab fa-youtube-square"></i>
+			</a>
 		</div>
-	</body>
-</html>
+	</footer>
+</body>
